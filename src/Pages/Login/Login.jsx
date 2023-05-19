@@ -1,22 +1,28 @@
-import { Titulo, Form } from "./Styles";
+import { Container, Titulo, Form, Label, Input, DivButton, Button } from "./Styles";
 
 function Login() {
 
   return (
   
-    <div>
+    <Container>
       <Titulo>
         Faça aqui o seu login!
       </Titulo>
       <Form>
-        Email
-        <input></input>
-        Senha
-        <input></input>
-        <button>Fazer login</button>
-        <button>Quero me cadastrar</button>
+        <div>
+          <Label> Email: </Label>
+          <Input placeholder= "exemplo@email.com"></Input>
+        </div>
+        <div>
+          <Label> Senha: </Label>
+          <Input></Input>
+        </div>
       </Form>
-    </div>
+      <DivButton>
+        <Button> Fazer login </Button>
+        <Button> Quero me cadastrar </Button>
+      </DivButton>    
+    </Container>
   
   )
   
