@@ -1,4 +1,5 @@
-import { Container, Titulo, Form, Label, Input, DivButton, Button } from "./Styles";
+import { Container, Titulo, Form, Label, Input, DivButton } from "./Styles";
+import { BotaoGenerico } from "../../components";
 
 function Login() {
 
@@ -9,6 +10,7 @@ function Login() {
         Faça aqui o seu login!
       </Titulo>
       <Form>
+        {/* as divs abaixo futuramente se tornarão components */}
         <div>
           <Label> Email: </Label>
           <Input placeholder= "exemplo@email.com"></Input>
@@ -19,8 +21,8 @@ function Login() {
         </div>
       </Form>
       <DivButton>
-        <Button color= "#FFA000"> Fazer login </Button>
-        <Button color= "#BC0E03"> Quero me cadastrar </Button>
+        <BotaoGenerico name= "Fazer Login" color= "#FFA000"/>
+        <BotaoGenerico name= "Quero me cadastrar" color= "#BC0E03"/>
       </DivButton>    
     </Container>
   

@@ -41,9 +41,3 @@ export const DivButton = styled.div`
     gap: 25px;
     margin-top: 50px;
 `
-
-export const Button = styled.button`
-    width: 367px;
-    height: 40px;
-    background-color: ${(props) => props.color};
-`
