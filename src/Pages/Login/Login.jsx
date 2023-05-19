@@ -19,8 +19,8 @@ function Login() {
         </div>
       </Form>
       <DivButton>
-        <Button> Fazer login </Button>
-        <Button> Quero me cadastrar </Button>
+        <Button color= "#FFA000"> Fazer login </Button>
+        <Button color= "#BC0E03"> Quero me cadastrar </Button>
       </DivButton>    
     </Container>
   

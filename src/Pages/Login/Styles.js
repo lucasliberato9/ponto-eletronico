@@ -17,7 +17,7 @@ export const Form = styled.div`
     flex-direction: column;
     width: 70%;
     justify-content: center;
-    
+
     div {
         margin-bottom: 15px;
     }
@@ -45,4 +45,5 @@ export const DivButton = styled.div`
 export const Button = styled.button`
     width: 367px;
     height: 40px;
+    background-color: ${(props) => props.color};
 `
