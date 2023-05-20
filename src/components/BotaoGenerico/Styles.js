@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
+<<<<<<< HEAD
     font-family : 'latoBold';
     border: none;
     border-radius: 2px;
@@ -14,4 +15,10 @@ export const Button = styled.button`
         background-color: ${(props) => props.hoverBackgroundColor};
         cursor: pointer;
     }
+=======
+    width: ${(props) => props.width};
+    height: ${(props) => props.height};
+    color: #d9d9d9;
+    background-color: ${(props) => props.color};
+>>>>>>> a29e0af (BotaoGenerico com props width e height)
 `
