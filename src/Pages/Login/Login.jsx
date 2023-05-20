@@ -22,7 +22,7 @@ function Login() {
       </Form>
       <DivButton>
         <BotaoGenerico name= "Fazer Login" color= "#FFA000"/>
-        <BotaoGenerico name= "Quero me cadastrar" color= "#BC0E03"/>
+        <BotaoGenerico name= "Quero me cadastrar" color= "#BC0E03" border_radius= "50px"/>
       </DivButton>    
     </Container>
   
