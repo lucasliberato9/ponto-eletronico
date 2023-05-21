@@ -12,7 +12,6 @@ function Cadastro() {
       </Titulo>
 
       <Form>
-        {/* as DivRows abaixo futuramente se tornarão components */}
 
         <DivInputs>
           <DivRow>
