@@ -58,7 +58,7 @@ function Editar_perfil() {
       </Form>
 
       <DivButton>
-        <BotaoGenerico name= "Enviar" color= "#FFA000"/>
+        <BotaoGenerico name= "Fazer cadastro" backgroundColor= "#FFA000"/>
       </DivButton> 
 
     </Container>
