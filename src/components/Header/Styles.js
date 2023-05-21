@@ -1,22 +1,21 @@
 import styled from "styled-components";
-import fundoHeader from "../../assets/Header.png";
-import fundoHeader900px from "../../assets/Header_900px.png";
+import fundoHeader_full from "../../assets/Header_full.png";
+import fundoHeader_mid from "../../assets/Header_mid.png";
 import LatoBold from "../../fonts/LatoBlack.ttf"
 
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
-    background-image: url(${fundoHeader}); 
+    background-image: url(${fundoHeader_full}); 
     background-size: cover;
     width: 100%;
-    height: 140px;
+    height: 72px;
     align-items: center;
     background-position: center;
     justify-content: space-between;
 
-    @media (max-width: 900px) {
-      background-image: url(${fundoHeader900px}); 
-      height: 72px;
+    @media (max-width: 550px) {
+      background-image: url(${fundoHeader_mid}); 
     }
 `;
 
@@ -27,20 +26,15 @@ export const Titulo = styled.h1`
           font-weight: normal;
           font-style: normal;
   } 
-  width: 320px;
+  width: 150px;
   font-family: 'latoBold';
   font-style: bold;
-  font-size: 45px;
+  font-size: 20px;
   display: flex;
   align-items: center;
   text-align: center;
   color: #E7E7E7;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-  @media (max-width: 900px) {
-    font-size: 20px;
-    width: 150px;
-  }
 `;
 
 export const DivButton = styled.div`
