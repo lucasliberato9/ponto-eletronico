@@ -6,6 +6,7 @@ export const Container = styled.div`
     width: 100%;
     align-items: center;
     margin-top: 70px;
+    font-family: 'latoBold';
 `
 
 export const Titulo = styled.div`
@@ -13,8 +14,7 @@ export const Titulo = styled.div`
     font-size: 25px;
     height: 82px;
 `
-
-export const Form = styled.div`
+export const Form = styled.form`
     display: flex;
     flex-direction: column;
     width: 60%;
@@ -24,8 +24,7 @@ export const Form = styled.div`
         margin-bottom: 15px;
     }
 `
-
-export const Label = styled.p`
+export const Label = styled.label`
     color: #FFA000;
 `
 
