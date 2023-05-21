@@ -35,6 +35,7 @@ export const Input = styled.input`
     padding-left: 15px;
     border: none;
     border-radius: 2px;
+    font-family: 'latoRegular';
 `
 
 export const DivInputs = styled.div`
