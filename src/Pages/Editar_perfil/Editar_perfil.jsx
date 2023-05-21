@@ -59,7 +59,7 @@ function Editar_perfil() {
 
       <DivButton>
         <BotaoGenerico name= "Confirmar" />
-        <BotaoGenerico name= "Cancelar Alterações" backgroundColor= "#BC0E03" color="#d9d9d9" />
+        <BotaoGenerico name= "Cancelar Alterações" backgroundColor= "#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03"/>
       </DivButton> 
 
     </Container>
