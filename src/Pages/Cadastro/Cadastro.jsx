@@ -57,7 +57,11 @@ function Cadastro() {
       </Form>
 
       <DivButton>
+<<<<<<< HEAD
         <BotaoGenerico name= "Enviar" />
+=======
+        <BotaoGenerico name= "Fazer cadastro" backgroundColor= "#FFA000"/>
+>>>>>>> ccfb22d (fix de botões nas páginas + pequenos ajustes nas páginas)
       </DivButton> 
 
     </Container>
