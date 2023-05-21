@@ -32,6 +32,8 @@ export const Input = styled.input`
     height: 40px;
     background: #D9D9D9;
     padding-left: 15px;
+    border: none;
+    border-radius: 2px;
 `
 
 export const DivButton = styled.div`
