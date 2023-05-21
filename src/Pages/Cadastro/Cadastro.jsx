@@ -12,7 +12,6 @@ function Editar_perfil() {
       </Titulo>
 
       <Form>
-        {/* as DivRows abaixo futuramente se tornarão components */}
 
         <DivInputs>
           <DivRow>
