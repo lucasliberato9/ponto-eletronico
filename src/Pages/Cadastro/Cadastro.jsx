@@ -12,17 +12,16 @@ function Editar_perfil() {
       </Titulo>
 
       <Form>
-        {/* as DivRows abaixo futuramente se tornarão components */}
 
         <DivInputs>
           <DivRow>
             <Label> Nome: </Label>
-            <Input placeholder= "Seu nome aqui"></Input>
+            <Input placeholder= "Digite seu nome"></Input>
           </DivRow>
 
           <DivRow>
             <Label> Nickname: </Label>
-            <Input placeholder= "Seu nickname aqui"></Input>
+            <Input placeholder= "Digite seu nickname"></Input>
           </DivRow>
         </DivInputs>
 
@@ -34,12 +33,12 @@ function Editar_perfil() {
         <DivInputs>
           <DivRow>
             <Label> Jogo: </Label>
-            <Input placeholder= "Seu jogo aqui"></Input>
+            <Input placeholder= "Digite seu jogo"></Input>
           </DivRow>
 
           <DivRow>
-            <Label> Elo: </Label>
-            <Input placeholder= "Seu elo no jogo aqui"></Input>
+            <Label> Rank/Elo: </Label>
+            <Input placeholder= "Digite seu rank/elo no jogo"></Input>
           </DivRow>
         </DivInputs>
 
@@ -58,7 +57,7 @@ function Editar_perfil() {
       </Form>
 
       <DivButton>
-        <BotaoGenerico name= "Enviar" color= "#FFA000"/>
+        <BotaoGenerico name= "Fazer cadastro" backgroundColor= "#FFA000"/>
       </DivButton> 
 
     </Container>

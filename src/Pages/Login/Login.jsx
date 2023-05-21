@@ -17,7 +17,7 @@ function Login() {
         </Campo>
         <Campo>
           <Label> Senha: </Label>
-          <Input></Input>
+          <Input placeholder="Digite sua senha"></Input>
         </Campo>
       </Form>
       <DivButton>

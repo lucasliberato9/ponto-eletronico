@@ -12,17 +12,16 @@ function Editar_perfil() {
       </Titulo>
 
       <Form>
-        {/* as DivRows abaixo futuramente se tornarão components */}
 
         <DivInputs>
           <DivRow>
             <Label> Nome: </Label>
-            <Input placeholder= "Seu nome aqui"></Input>
+            <Input placeholder= "Digite seu nome"></Input>
           </DivRow>
 
           <DivRow>
             <Label> Nickname: </Label>
-            <Input placeholder= "Seu nickname aqui"></Input>
+            <Input placeholder= "Digite seu nickname"></Input>
           </DivRow>
         </DivInputs>
 
@@ -34,32 +33,32 @@ function Editar_perfil() {
         <DivInputs>
           <DivRow>
             <Label> Jogo: </Label>
-            <Input placeholder= "Seu jogo aqui"></Input>
+            <Input placeholder= "Digite seu jogo"></Input>
           </DivRow>
 
           <DivRow>
-            <Label> Elo: </Label>
-            <Input placeholder= "Seu elo no jogo aqui"></Input>
+            <Label> Rank/Elo: </Label>
+            <Input placeholder= "Digite seu rank/elo no jogo"></Input>
           </DivRow>
         </DivInputs>
 
         <DivInputs>
           <DivRow>
             <Label> Senha: </Label>
-            <Input placeholder= "Escolha uma senha"></Input>
+            <Input placeholder= "Escolha sua nova senha"></Input>
           </DivRow>
 
           <DivRow>
             <Label> Confirmação de senha: </Label>
-            <Input placeholder= "Confirme sua senha"></Input>
+            <Input placeholder= "Confirme sua nova senha"></Input>
           </DivRow>
         </DivInputs>
 
       </Form>
 
       <DivButton>
-        <BotaoGenerico name= "Cancelar Alterações" color= "#BC0E03"/>
-        <BotaoGenerico name= "Confirmar" color= "#FFA000"/>
+        <BotaoGenerico name= "Confirmar" />
+        <BotaoGenerico name= "Cancelar Alterações" backgroundColor= "#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03"/>
       </DivButton> 
 
     </Container>
