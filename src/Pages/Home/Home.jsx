@@ -1,13 +1,18 @@
+import { Container, Titulo } from "./Styles";
+import { BotaoGenerico } from "../../components";
+
 function Home() {
 
   return (
-
-    <div>
-      ESTÁ É A PÁGINA HOME
-    </div>
-
+  
+    <Container>
+      <Titulo>
+        RODEI
+      </Titulo>
+    </Container>
+  
   )
-
+  
 }
-
+  
 export default Home;
