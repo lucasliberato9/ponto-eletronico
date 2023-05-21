@@ -5,6 +5,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 70px;
+    font-family: 'latoBold';
 `
 
 export const Titulo = styled.div`
@@ -12,10 +13,10 @@ export const Titulo = styled.div`
     font-size: 25px;
     height: 82px;
 `
-export const Form = styled.div`
+export const Form = styled.form`
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 50%;
     justify-content: center;
 
     div {
@@ -23,7 +24,9 @@ export const Form = styled.div`
     }
 `
 
-export const Label = styled.p`
+export const Campo = styled.div``
+
+export const Label = styled.label`
     color: #FFA000;
 `
 
@@ -32,6 +35,8 @@ export const Input = styled.input`
     height: 40px;
     background: #D9D9D9;
     padding-left: 15px;
+    border: none;
+    border-radius: 2px;
 `
 
 export const DivButton = styled.div`
