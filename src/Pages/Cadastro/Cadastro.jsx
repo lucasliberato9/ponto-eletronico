@@ -1,52 +1,68 @@
-import { Container, Titulo, Form, Label, Input, DivButton } from "./Styles";
+import { Container, Titulo, Form, Label, Input, DivInputs, DivRow, DivEmail, DivButton } from "./Styles.js";
 import { BotaoGenerico } from "../../components";
 
-function Cadastro() {
+function Editar_perfil() {
 
   return (
-  
+
     <Container>
+
       <Titulo>
         Preencha os seus dados para se cadastrar!
       </Titulo>
+
       <Form>
-        {/* as divs abaixo futuramente se tornarão components */}
-        <div>
-          <Label> Nome: </Label>
-          <Input placeholder= "Seu nome aqui"></Input>
-        </div>
-        <div>
-          <Label> Nickname: </Label>
-          <Input placeholder= "Seu nickname aqui"></Input>
-        </div>
-        <div>
+        {/* as DivRows abaixo futuramente se tornarão components */}
+
+        <DivInputs>
+          <DivRow>
+            <Label> Nome: </Label>
+            <Input placeholder= "Seu nome aqui"></Input>
+          </DivRow>
+
+          <DivRow>
+            <Label> Nickname: </Label>
+            <Input placeholder= "Seu nickname aqui"></Input>
+          </DivRow>
+        </DivInputs>
+
+        <DivEmail>
           <Label> Email: </Label>
           <Input placeholder= "exemplo@email.com"></Input>
-        </div>
-        <div>
-          <Label> Jogo: </Label>
-          <Input placeholder= "Seu jogo aqui"></Input>
-        </div>
-        <div>
-          <Label> Elo: </Label>
-          <Input placeholder= "Seu elo no jogo aqui"></Input>
-        </div>
-        <div>
-          <Label> Senha: </Label>
-          <Input placeholder= "Escolha uma senha"></Input>
-        </div>
-        <div>
-          <Label> Confirmação de senha: </Label>
-          <Input placeholder= "Confirme sua senha"></Input>
-        </div>
+        </DivEmail>
+
+        <DivInputs>
+          <DivRow>
+            <Label> Jogo: </Label>
+            <Input placeholder= "Seu jogo aqui"></Input>
+          </DivRow>
+
+          <DivRow>
+            <Label> Elo: </Label>
+            <Input placeholder= "Seu elo no jogo aqui"></Input>
+          </DivRow>
+        </DivInputs>
+
+        <DivInputs>
+          <DivRow>
+            <Label> Senha: </Label>
+            <Input placeholder= "Escolha uma senha"></Input>
+          </DivRow>
+
+          <DivRow>
+            <Label> Confirmação de senha: </Label>
+            <Input placeholder= "Confirme sua senha"></Input>
+          </DivRow>
+        </DivInputs>
+
       </Form>
+
       <DivButton>
         <BotaoGenerico name= "Enviar" color= "#FFA000"/>
-      </DivButton>    
+      </DivButton> 
+
     </Container>
-  
-  )
-  
+  ) 
 }
-  
-export default Cadastro;
+
+export default Editar_perfil;
