@@ -45,21 +45,21 @@ function Editar_perfil() {
 
         <DivInputs>
           <DivRow>
-            <Label> Senha: </Label>
-            <Input placeholder= "Escolha uma senha"></Input>
+            <Label> Nova senha: </Label>
+            <Input placeholder= "Escolha uma nova senha"></Input>
           </DivRow>
 
           <DivRow>
-            <Label> Confirmação de senha: </Label>
-            <Input placeholder= "Confirme sua senha"></Input>
+            <Label> Confirmação de nova senha: </Label>
+            <Input placeholder= "Confirme sua nova senha"></Input>
           </DivRow>
         </DivInputs>
 
       </Form>
 
       <DivButton>
-        <BotaoGenerico name= "Cancelar Alterações" color= "#BC0E03"/>
-        <BotaoGenerico name= "Confirmar" color= "#FFA000"/>
+        <BotaoGenerico name= "Cancelar Alterações" backgroundColor= "#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03"/>
+        <BotaoGenerico name= "Confirmar" />
       </DivButton> 
 
     </Container>
