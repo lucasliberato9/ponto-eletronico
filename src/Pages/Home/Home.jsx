@@ -1,11 +1,15 @@
-import { Container, Rodape, Botaoadm,Pontoadm, Titulo1,Botaologado, PontoLogado, Titulo2, Labelj, Labelg, Labelb, Labela, Labelq,Labelw, PontoLigado,Titulo3, Botaoligado, Container } from "./Styles";
+import { Container, Form, Rodape, Botaoadm,Pontoadm, Titulo1,
+  Botaologado, PontoLogado, Titulo2, Labelj, Labelg, Labelb, Labela, Labelq,Labelw,
+  PontoLigado,Titulo3, Botaoligado, 
+  Logados, Time, Dados} from "./Styles";
 import { BotaoGenerico } from "../../components";
 
 function Home() {
 
   return (
     
-      <Container>
+ <Container>
+  <Form>
     <><Rodape>
       
     </Rodape>
@@ -18,8 +22,16 @@ function Home() {
           <BotaoGenerico height="70px" width="117px" name="Login/Cadastre-se" backgroundColor="#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03" />
         </Botaoadm>
       </Pontoadm></>
-      
-   </Container>
+
+      <Logados>
+         <Dados>JOGADOR</Dados>
+         <Dados>JOGO</Dados>
+         <Time>INÍCIO</Time>
+         <Time>TEMPO</Time>
+      </Logados>
+
+      </Form>
+</Container>
     
     // Ligar o ponto
 /*
