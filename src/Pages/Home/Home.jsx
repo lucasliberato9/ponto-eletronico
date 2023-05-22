@@ -1,20 +1,26 @@
-import { Botaoadm,Pontoadm, Titulo1,Botaologado, PontoLogado, Titulo2, Labelj, Labelg, Labelb, Labela, Labelq,Labelw, PontoLigado,Titulo3, Botaoligado } from "./Styles";
+import { Container, Rodape, Botaoadm,Pontoadm, Titulo1,Botaologado, PontoLogado, Titulo2, Labelj, Labelg, Labelb, Labela, Labelq,Labelw, PontoLigado,Titulo3, Botaoligado, Container } from "./Styles";
 import { BotaoGenerico } from "../../components";
 
 function Home() {
 
   return (
-    // Admin ponto
-  
-    <Pontoadm>
-      <Titulo1>
-        ADMINISTRE SEU PONTO
-      </Titulo1>
-      <Botaoadm> 
-        <BotaoGenerico height = "70px" width ="117px" name= "Login/Cadastre-se" backgroundColor= "#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03" />
+    
+      <Container>
+    <><Rodape>
+      
+    </Rodape>
+     
+      <Pontoadm>
+        <Titulo1>
+          ADMINISTRE SEU PONTO
+        </Titulo1>
+        <Botaoadm>
+          <BotaoGenerico height="70px" width="117px" name="Login/Cadastre-se" backgroundColor="#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03" />
         </Botaoadm>
-    </Pontoadm>
-
+      </Pontoadm></>
+      
+   </Container>
+    
     // Ligar o ponto
 /*
 <PontoLogado>

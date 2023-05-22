@@ -1,6 +1,36 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 70px;
+    font-family: 'latoBold';
+`
 
+export const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    margin-top: 60px;
+    div {
+        margin-bottom: 15px;
+    }
+`
+// Rodapé 
+export const Rodape = styled.div`
+    background-color: #1F1A1A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    font-family: 'latoBold';
+    width: 90%;
+    margin-left: 80px;
+    height: 250px;
+`
 // Administre seu ponto
 export const Pontoadm = styled.div`
     background-color: #1F1A1A;
@@ -139,4 +169,18 @@ bottom: 450px;
 left: 110px;
 color: #FFA000;
 
+`
+
+//Usuários Logados  com o jogo, tempo de inicio e tempo em jogo
+
+export const Logados = styled.div`
+    background-color: #1F1A1A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    font-family: 'latoBold';
+    width: 90%;
+    margin-left: 80px;
+    height: 250px;
 `
