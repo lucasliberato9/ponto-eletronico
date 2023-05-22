@@ -50,6 +50,12 @@ function Editar_perfil() {
 
           <DivRow>
             <Label> Confirmação de senha: </Label>
+            <Label> Nova senha: </Label>
+            <Input placeholder= "Escolha uma nova senha"></Input>
+          </DivRow>
+
+          <DivRow>
+            <Label> Confirmação da nova senha: </Label>
             <Input placeholder= "Confirme sua nova senha"></Input>
           </DivRow>
         </DivInputs>

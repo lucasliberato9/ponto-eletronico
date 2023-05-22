@@ -1,7 +1,7 @@
 import { Container, Titulo, Form, Label, Input, DivInputs, DivRow, DivEmail, DivButton } from "./Styles.js";
 import { BotaoGenerico } from "../../components";
 
-function Editar_perfil() {
+function Cadastro() {
 
   return (
 
@@ -57,11 +57,13 @@ function Editar_perfil() {
       </Form>
 
       <DivButton>
+        <BotaoGenerico name= "Enviar" />
         <BotaoGenerico name= "Fazer cadastro" backgroundColor= "#FFA000"/>
       </DivButton> 
 
     </Container>
   ) 
+
 }
 
-export default Editar_perfil;
+export default Cadastro;

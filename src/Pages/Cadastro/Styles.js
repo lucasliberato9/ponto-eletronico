@@ -8,6 +8,7 @@ export const Container = styled.div`
     margin-top: 70px;
     font-family: 'latoBold';
 `
+
 export const Titulo = styled.div`
     text-align: center;
     font-size: 25px;
@@ -19,7 +20,6 @@ export const Form = styled.form`
     width: 60%;
     justify-content: center;
     margin-top: 60px;
-
     div {
         margin-bottom: 15px;
     }
@@ -27,6 +27,7 @@ export const Form = styled.form`
 export const Label = styled.label`
     color: #FFA000;
 `
+
 export const Input = styled.input`
     width: 100%;
     height: 40px;
@@ -36,6 +37,7 @@ export const Input = styled.input`
     border-radius: 2px;
     font-family: 'latoRegular';
 `
+
 export const DivInputs = styled.div`
     display: flex;
     flex-direction: row;
@@ -43,16 +45,19 @@ export const DivInputs = styled.div`
     gap: 60px;
     align-self: center;
 `
+
 export const DivRow = styled.div`
     width: 100%;
     gap: 60px;
     align-self: center;
 `
+
 export const DivEmail = styled.div`
     width: 100%;
     gap: 60px;
     align-self: center;
 `
+
 export const DivButton = styled.div`
     display: flex;
     width: auto;
