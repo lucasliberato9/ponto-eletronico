@@ -43,7 +43,7 @@ export const DivInputs = styled.div`
     display: flex;
     flex-direction: row;
     width: 100%;
-    gap: 20px;
+    gap: 30px;
     align-self: center;
     @media (max-width: 750px) {
         gap: 15px;
