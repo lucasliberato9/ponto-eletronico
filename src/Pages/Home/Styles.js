@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+
+// Administre seu ponto
 export const Pontoadm = styled.div`
     background-color: #1F1A1A;
     display: flex;
@@ -17,6 +19,8 @@ export const Titulo1 = styled.div`
     font-size: 25px;
     height: 82px;
     color: #FFA000;
+    position: fixed;
+    top: 190px;
 `
 export const Botaoadm = styled.button`
   display: flex;
@@ -26,7 +30,12 @@ export const Botaoadm = styled.button`
     margin-top: 50px;
     border: none;
     border-radius: 5px;
+    position: fixed;
+    top: 220px;
 `
+
+// Ligar o ponto
+
 export const PontoLogado = styled.div`
     background-color: #1F1A1A;
     display: flex;
@@ -38,7 +47,6 @@ export const PontoLogado = styled.div`
     margin-left: 80px;
     height: 250px;
 `
-
 export const Titulo2 = styled.div`
     text-align: center;
     font-size: 25px;
@@ -46,34 +54,20 @@ export const Titulo2 = styled.div`
     color: #FFA000;
     margin-top: 10px;
 `
-
 export const Labelj = styled.p`
     position: fixed;
-    bottom: 400px;
+    bottom: 450px;
     left: 110px;
     color: #FFA000;
     
 `
 export const Labelg = styled.p`
     position: fixed;
-    bottom: 360px;
+    bottom: 420px;
     left: 110px;
     color: #FFA000;
     
 `
-export const Labela= styled.p`
-    position: fixed;
-    bottom: 400px;
-    right: 500px;
-    color: #FFA000;
-    
-`
-export const Labelb = styled.p`
-    position: fixed;
-    bottom: 360px;
-    right: 500px;
-    color: #FFA000;
-    `
 export const Botaologado = styled.button`
 border: none;
 border-radius: 5px;
@@ -82,6 +76,67 @@ display: flex;
     gap: 25px;
     margin-top: 50px;
     position: fixed;
-    bottom: 380px;
+    bottom: 420px;
     right: 110px;
+`
+
+// Desligar o ponto
+
+export const Botaoligado = styled.button`
+border: none;
+border-radius: 5px;
+display: flex;
+    width: auto;
+    gap: 25px;
+    margin-top: 50px;
+    position: fixed;
+    bottom: 420px;
+    right: 110px;
+`
+export const Titulo3 = styled.div`
+    text-align: center;
+    font-size: 25px;
+    height: 82px;
+    color: #FFA000;
+    margin-top: 10px;
+`
+export const PontoLigado = styled.div`
+    background-color: #1F1A1A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    font-family: 'latoBold';
+    width: 90%;
+    margin-left: 80px;
+    height: 250px;
+`
+
+export const Labela= styled.p`
+    position: fixed;
+    bottom: 450px;
+    right: 500px;
+    color: #FFA000;
+    
+`
+export const Labelb = styled.p`
+    position: fixed;
+    bottom: 420px;
+    right: 500px;
+    color: #FFA000;
+    `
+
+export const Labelq = styled.p`
+position: fixed;
+bottom: 420px;
+left: 110px;
+color: #FFA000;
+
+`
+export const Labelw = styled.p`
+position: fixed;
+bottom: 450px;
+left: 110px;
+color: #FFA000;
+
 `
