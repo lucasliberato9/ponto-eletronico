@@ -17,12 +17,13 @@ export const Titulo = styled.div`
 `;
 export const Form = styled.form`
   display: flex;
+  margin-top: 10px;
   flex-direction: column;
-  width: 60%;
+  width: 75%;
   justify-content: center;
-  margin-top: 60px;
-  div {
-    margin-bottom: 15px;
+  gap: 15px;
+  @media (max-width: 750px) {
+    width: 90%;
   }
 `;
 export const Label = styled.label`
@@ -43,8 +44,13 @@ export const DivInputs = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  gap: 60px;
+  gap: 30px;
   align-self: center;
+  @media (max-width: 750px) {
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const DivRow = styled.div`
@@ -65,4 +71,5 @@ export const DivButton = styled.div`
   flex-direction: row;
   gap: 60px;
   margin-top: 48px;
+  margin-bottom: 50px;
 `;

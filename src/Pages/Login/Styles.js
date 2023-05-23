@@ -16,11 +16,11 @@ export const Titulo = styled.div`
 export const Form = styled.form`
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     justify-content: center;
-
-    div {
-        margin-bottom: 15px;
+    gap: 15px;
+    @media (max-width: 750px) {
+        width: 90%;
     }
 `
 
