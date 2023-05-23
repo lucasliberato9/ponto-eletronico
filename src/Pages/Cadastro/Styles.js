@@ -23,7 +23,7 @@ export const Form = styled.form`
   justify-content: center;
   gap: 15px;
   @media (max-width: 750px) {
-    width: 90%;
+    width: 70%;
   }
 `;
 export const Label = styled.label`
