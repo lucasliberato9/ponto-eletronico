@@ -58,7 +58,6 @@ function Cadastro() {
 
       <DivButton>
         <BotaoGenerico name= "Enviar" />
-        <BotaoGenerico name= "Fazer cadastro" backgroundColor= "#FFA000"/>
       </DivButton> 
 
     </Container>
