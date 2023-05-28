@@ -47,6 +47,10 @@ export const Pontoadm = styled.div`
   width: 90%;
   margin-left: 5%;
   height: 250px;
+
+  @media (max-width: 768px) {
+  height: 150px;
+  }
 `
 
 export const Titulo1 = styled.div`
@@ -54,6 +58,7 @@ export const Titulo1 = styled.div`
   font-size: 25px;
   height: 82px;
   color: #FFA000;
+  margin-top: 10px;
 `
 
 export const Botaoadm = styled.button`
@@ -62,6 +67,12 @@ export const Botaoadm = styled.button`
   flex-direction: column;
   border: none;
   border-radius: 5px;
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 0;
+    width: 90%;
+    height: 40px;
+  }
 `
 
 export const PontoLogado = styled.div`
@@ -119,8 +130,9 @@ export const Botaologado = styled.button`
    border: none;
   border-radius: 5px;
   display: flex;
-  width: auto;
+  width: 100px;
   margin-left: 80%;
+  height: 25%;
 
   @media (max-width: 768px) {
     margin-left: 0;
@@ -131,12 +143,19 @@ export const Botaologado = styled.button`
 `
 
 export const Botaoligado = styled.button`
-display: flex;
-  border: none;
+ border: none;
   border-radius: 5px;
   display: flex;
-  width: auto;
+  width: 100px;
   margin-left: 80%;
+  height: 25%;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 75px;
+    width: 90%;
+    height: 40px;
+  }
 `
 
 export const Titulo3 = styled.div`
@@ -163,12 +182,20 @@ export const Labela = styled.p`
   color: #FFA000;
   top: 650px;
   position: absolute;
+  @media (max-width: 768px) {
+    top: 630px;
+    left: 60%;
+  }
 `
 
 export const Labelb = styled.p`
   top: 700px;
   color: #FFA000;
   position: absolute;
+  @media (max-width: 768px) {
+    top: 630px;
+    left: 10%;
+  }
 `
 
 export const Labelq = styled.p`
@@ -176,6 +203,10 @@ export const Labelq = styled.p`
   top: 700px;
   left: 8%;
   color: #FFA000;
+  @media (max-width: 768px) {
+    top: 580px;
+    left: 35%;
+  }
 `
 
 export const Labelw = styled.p`
@@ -183,6 +214,10 @@ export const Labelw = styled.p`
   left: 8%;
   color: #FFA000;
   top: 650px;
+  @media (max-width: 768px) {
+    top: 560px;
+    left: 35%;
+  }
 `
 
 export const Logados = styled.div`
@@ -224,29 +259,5 @@ export const Time = styled.p`
 
   @media (max-width: 768px) {
     justify-content: center;
-  }
-`
-
-// Responsive adjustments
-export const LabelResponsive = styled.p`
-  color: #FFA000;
-  position: absolute;
-  top: 650px;
-
-  @media (max-width: 768px) {
-    top: 700px;
-  }
-`
-
-export const BotaoligadoResponsive = styled.button`
-  border: none;
-  border-radius: 5px;
-  display: flex;
-  width: auto;
-  margin-left: 80%;
-
-  @media (max-width: 768px) {
-    margin-left: 0;
-    margin-top: 10px;
   }
 `
