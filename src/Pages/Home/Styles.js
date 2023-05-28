@@ -30,6 +30,7 @@ export const Rodape = styled.div`
   width: 82%;
   margin-left: 9%;
   height: 250px;
+
   @media (max-width: 768px) {
     width: 100%;
     margin-left: 0;
@@ -63,10 +64,11 @@ export const Titulo1 = styled.div`
 
 export const Botaoadm = styled.button`
   display: flex;
-  width: auto;
+  width: 120px;
   flex-direction: column;
   border: none;
   border-radius: 5px;
+  height: 80px;
   @media (max-width: 768px) {
     margin-left: 0;
     margin-top: 0;
