@@ -119,8 +119,9 @@ export const Botaologado = styled.button`
    border: none;
   border-radius: 5px;
   display: flex;
-  width: auto;
+  width: 100px;
   margin-left: 80%;
+  height: 25%;
 
   @media (max-width: 768px) {
     margin-left: 0;
