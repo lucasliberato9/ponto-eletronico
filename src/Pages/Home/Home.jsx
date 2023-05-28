@@ -7,32 +7,29 @@ import { BotaoGenerico } from "../../components";
 function Home() {
 
   return (
-<Container>
+    <Container>
     <Form>
-    <Rodape>
+      <>
+        <Rodape></Rodape>
 
-</Rodape>
-<PontoLogado>
-  <Titulo2>
-   LIGUE SEU PONTO
-  </Titulo2>
-  <Labelj> JOGADOR: </Labelj>
-  <Labelg> JOGO: </Labelg>
- 
-<Botaologado>
-<BotaoGenerico height = "100%" width ="100%" name= "LIGAR PONTO" backgroundColor= "#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03" />
-</Botaologado>
-</PontoLogado>
-<Logados>
-<Dados> JOGADOR</Dados>
-<Dados> JOGO</Dados>
-<Dados> INÍCIO</Dados>
-<Dados> TEMPO</Dados>
-</Logados>
+        <Pontoadm>
+          <Titulo1>ADMINISTRE SEU PONTO</Titulo1>
+          <Botaoadm>
+            <BotaoGenerico
+              height="100%" width="100%" name="Login/Cadastre-se" backgroundColor="#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03"
+            />
+          </Botaoadm>
+        </Pontoadm>
+      </>
 
+      <Logados>
+        <Dados>JOGADOR</Dados>
+        <Dados>JOGO</Dados>
+        <Time>INÍCIO</Time>
+        <Time>TEMPO</Time>
+      </Logados>
     </Form>
-       
-</Container>
+  </Container>
 
 
 
