@@ -30,6 +30,11 @@ export const Rodape = styled.div`
   width: 82%;
   margin-left: 9%;
   height: 250px;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+    height: 200px;
+  }
 `
 
 export const Pontoadm = styled.div`
@@ -84,13 +89,11 @@ export const Labelj = styled.p`
   top: 650px;
   left: 8%;
   color: #FFA000;
-  color: #FFA000;
-  position: absolute;
   top: 650px;
 
   @media (max-width: 768px) {
-    top: 620px;
-
+    top: 580px;
+    left: 30%;
   }
   
 `
@@ -100,13 +103,13 @@ export const Labelg = styled.p`
   top: 700px;
   left: 8%;
   color: #FFA000;
-  color: #FFA000;
+  
   position: absolute;
-  top: 650px;
+  
 
   @media (max-width: 768px) {
-    top: 660px;
-    
+    top: 610px;
+    left: 30%;
     
   }
   
@@ -121,8 +124,9 @@ export const Botaologado = styled.button`
 
   @media (max-width: 768px) {
     margin-left: 0;
-    margin-top: 70px;
-    text-align: center;
+    margin-top: 75px;
+    width: 90%;
+    height: 40px;
   }
 `
 

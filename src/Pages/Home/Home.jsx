@@ -20,7 +20,7 @@ function Home() {
   <Labelg> JOGO: </Labelg>
  
 <Botaologado>
-<BotaoGenerico height = "56px" width ="117px" name= "LIGAR PONTO" backgroundColor= "#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03" />
+<BotaoGenerico height = "100%" width ="100%" name= "LIGAR PONTO" backgroundColor= "#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03" />
 </Botaologado>
 </PontoLogado>
 <Logados>
