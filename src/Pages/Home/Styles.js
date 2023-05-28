@@ -230,60 +230,56 @@ export const Logados = styled.div`
   width: 90%;
   margin-left: 5%;
   height: 800px;
-  gap: 20%;
-  justify-content: center;
-  align-items: center;
+  gap: 15%;
+ 
 
   @media (max-width: 768px) {
-    flex-direction: column;
+  
     height: auto;
+    
   }
 `
 
-export const Dados = styled.p`
+export const DadosM = styled.p`
   font-size: 20px;
   color: #FFA000;
-  padding-top: 10px;
-  padding-left: 80px;
+  margin-top: 20px;
+  padding-left: 150px;
 
   @media (max-width: 768px) {
-    padding-left: 0;
-    text-align: center;
+    padding-left: 10px;
     margin-bottom: 10px;
   }
 `
+export const DadosJ = styled.p`
+  font-size: 20px;
+  color: #FFA000;
+  margin-top: 20px;
+  padding-left: 80px;
 
+  @media (max-width: 768px) {
+display: none;
+  }
+`
 export const Time = styled.p`
   display: flex;
   font-size: 20px;
   color: #FFA000;
-  padding-top: 10px;
+ margin-top: 20px;
 
   @media (max-width: 768px) {
-    justify-content: center;
+  display: none;
   }
 `
-
-// Responsive adjustments
-export const LabelResponsive = styled.p`
+export const TimeN = styled.p`
+font-size: 20px;
   color: #FFA000;
-  position: absolute;
-  top: 650px;
+  margin-top: 20px;
+  padding-left: 80px;
 
   @media (max-width: 768px) {
-    top: 700px;
+    padding-left: 70px;
+    margin-bottom: 10px;
   }
 `
 
-export const BotaoligadoResponsive = styled.button`
-  border: none;
-  border-radius: 5px;
-  display: flex;
-  width: auto;
-  margin-left: 80%;
-
-  @media (max-width: 768px) {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-`
