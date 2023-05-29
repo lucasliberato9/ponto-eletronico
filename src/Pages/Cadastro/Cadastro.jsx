@@ -63,6 +63,7 @@ function Cadastro() {
           <DivRow>
             <Label htmlFor="elo"> Rank/Elo: </Label>
             <Input id="elo" placeholder= "Digite seu rank/elo no jogo" required onChange={(e) => setElo(e.target.value)}></Input>
+            
           </DivRow>
         </DivInputs>
 

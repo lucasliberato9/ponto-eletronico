@@ -10,52 +10,65 @@ import {
   DivButton,
 } from "./Styles.js";
 import { BotaoGenerico } from "../../components";
+import { useState } from "react";
 
 function Editar_perfil() {
-  
+
+  const [nome, setNome] = useState("");
+  const [nick, setNick] = useState("");
+  const [emailEdit, setEmailEdit] = useState("");
+  const [jogo, setJogo] = useState("");
+  const [elo, setElo] = useState("");
+  const [senhaEdit, setSenhaEdit] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log({emailCadastro, senhaCadastro, nome, nick, jogo, elo});
+  }
+
   return (
     <Container>
       <Titulo>Altere seus dados aqui!</Titulo>
 
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <DivInputs>
         <DivRow>
             <Label htmlFor="nome"> Nome: </Label>
-            <Input id="nome" placeholder= "Digite seu nome" required></Input>
+            <Input id="nome" placeholder= "Digite seu nome" required onChange={(e)=> setNome(e.target.value)}></Input>
           </DivRow>
 
           <DivRow>
             <Label htmlFor="nick"> Nickname: </Label>
-            <Input id="nick" placeholder= "Digite seu nickname" required></Input>
+            <Input id="nick" placeholder= "Digite seu nickname" required onChange={(e)=> setNick(e.target.value)}></Input>
           </DivRow>
         </DivInputs>
 
         <DivEmail>
-          <Label htmlFor="email"> Email: </Label>
-          <Input id="email" type="email" placeholder="seuemail@email.com" required></Input>
+          <Label htmlFor="emailEdit"> Email: </Label>
+          <Input id="emailEdit" type="email" placeholder="seuemail@email.com" required onChange={(e) => setEmailEdit(e.target.value)}></Input>
         </DivEmail>
 
         <DivInputs>
           <DivRow>
             <Label htmlFor="jogo"> Jogo: </Label>
-            <Input id="jogo" placeholder= "Digite seu jogo" required></Input>
+            <Input id="jogo" placeholder= "Digite seu jogo" required onChange={(e)=> setJogo(e.target.value)}></Input>
           </DivRow>
 
           <DivRow>
             <Label htmlFor="elo"> Rank/Elo: </Label>
-            <Input id="elo" placeholder= "Digite seu rank/elo no jogo" required></Input>
+            <Input id="elo" placeholder= "Digite seu rank/elo no jogo" required onChange={(e)=> setElo(e.target.value)}></Input>
           </DivRow>
         </DivInputs>
 
         <DivInputs>
           <DivRow>
-            <Label htmlFor="senha"> Senha: </Label>
-            <Input type="password" placeHolder="Escolha sua nova senha" required></Input>
+            <Label htmlFor="senhaEdit"> Senha: </Label>
+            <Input id="senhaEdit" type="password" placeHolder="Escolha sua nova senha" required onChange={(e)=> setSenhaEdit(e.target.value)}></Input>
           </DivRow>
 
           <DivRow>
-            <Label htmlFor="senha"> Confirmação de senha: </Label>
-            <Input  id="senha" type="password" placeholder= "Confirme sua nova senha" required></Input>
+            <Label htmlFor="senhaEdit"> Confirmação de senha: </Label>
+            <Input  id="senhaEdit" type="password" placeholder= "Confirme sua nova senha" required onChange={(e)=> setSenhaEdit(e.target.value) }></Input>
           </DivRow>
         </DivInputs>
       </Form>
