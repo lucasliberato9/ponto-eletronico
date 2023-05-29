@@ -15,13 +15,13 @@ function Cadastro() {
 
         <DivInputs>
           <DivRow>
-            <Label> Nome: </Label>
-            <Input placeholder= "Digite seu nome"></Input>
+            <Label htmlFor="nome"> Nome: </Label>
+            <Input id="nome" placeholder= "Digite seu nome" required></Input>
           </DivRow>
 
           <DivRow>
-            <Label> Nickname: </Label>
-            <Input placeholder= "Digite seu nickname"></Input>
+            <Label htmlFor="nick"> Nickname: </Label>
+            <Input id="nick" placeholder= "Digite seu nickname" required></Input>
           </DivRow>
         </DivInputs>
 

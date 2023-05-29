@@ -12,12 +12,12 @@ function Login() {
       <Form>
         {/* as divs abaixo futuramente se tornarão components */}
         <Campo>
-          <Label> Email: </Label>
-          <Input placeholder= "exemplo@email.com"></Input>
+          <Label htmlFor="email"> Email: </Label>
+          <Input id="email" type="email" placeholder= "exemplo@email.com" required></Input>
         </Campo>
         <Campo>
-          <Label> Senha: </Label>
-          <Input placeholder="Digite sua senha"></Input>
+          <Label htmlFor="senha"> Senha: </Label>
+          <Input id="senha" type= "password" placeholder="Digite sua senha" required></Input>
         </Campo>
       </Form>
       <DivButton>
