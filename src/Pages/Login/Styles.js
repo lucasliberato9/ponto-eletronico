@@ -46,4 +46,5 @@ export const DivButton = styled.div`
     flex-direction: column;
     gap: 25px;
     margin-top: 50px;
+   
 `

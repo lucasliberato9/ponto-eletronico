@@ -12,49 +12,50 @@ import {
 import { BotaoGenerico } from "../../components";
 
 function Editar_perfil() {
+  
   return (
     <Container>
       <Titulo>Altere seus dados aqui!</Titulo>
 
       <Form>
         <DivInputs>
-          <DivRow>
-            <Label> Nome: </Label>
-            <Input placeholder="Digite seu nome"></Input>
+        <DivRow>
+            <Label htmlFor="nome"> Nome: </Label>
+            <Input id="nome" placeholder= "Digite seu nome" required></Input>
           </DivRow>
 
           <DivRow>
-            <Label> Nickname: </Label>
-            <Input placeholder="Digite seu nickname"></Input>
+            <Label htmlFor="nick"> Nickname: </Label>
+            <Input id="nick" placeholder= "Digite seu nickname" required></Input>
           </DivRow>
         </DivInputs>
 
         <DivEmail>
-          <Label> Email: </Label>
-          <Input placeholder="exemplo@email.com"></Input>
+          <Label htmlFor="email"> Email: </Label>
+          <Input id="email" type="email" placeholder="seuemail@email.com" required></Input>
         </DivEmail>
 
         <DivInputs>
           <DivRow>
-            <Label> Jogo: </Label>
-            <Input placeholder="Digite seu jogo"></Input>
+            <Label htmlFor="jogo"> Jogo: </Label>
+            <Input id="jogo" placeholder= "Digite seu jogo" required></Input>
           </DivRow>
 
           <DivRow>
-            <Label> Rank/Elo: </Label>
-            <Input placeholder="Digite seu rank/elo no jogo"></Input>
+            <Label htmlFor="elo"> Rank/Elo: </Label>
+            <Input id="elo" placeholder= "Digite seu rank/elo no jogo" required></Input>
           </DivRow>
         </DivInputs>
 
         <DivInputs>
           <DivRow>
-            <Label> Nova senha: </Label>
-            <Input placeholder="Escolha sua nova senha"></Input>
+            <Label htmlFor="senha"> Senha: </Label>
+            <Input type="password" placeHolder="Escolha sua nova senha" required></Input>
           </DivRow>
 
           <DivRow>
-            <Label> Confirmação da nova senha: </Label>
-            <Input placeholder="Confirme sua nova senha"></Input>
+            <Label htmlFor="senha"> Confirmação de senha: </Label>
+            <Input  id="senha" type="password" placeholder= "Confirme sua nova senha" required></Input>
           </DivRow>
         </DivInputs>
       </Form>
