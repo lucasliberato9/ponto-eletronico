@@ -30,6 +30,7 @@ export const Rodape = styled.div`
   width: 82%;
   margin-left: 9%;
   height: 250px;
+
   @media (max-width: 768px) {
     width: 100%;
     margin-left: 0;
@@ -63,10 +64,11 @@ export const Titulo1 = styled.div`
 
 export const Botaoadm = styled.button`
   display: flex;
-  width: auto;
+  width: 120px;
   flex-direction: column;
   border: none;
   border-radius: 5px;
+  height: 80px;
   @media (max-width: 768px) {
     margin-left: 0;
     margin-top: 0;
@@ -228,36 +230,56 @@ export const Logados = styled.div`
   width: 90%;
   margin-left: 5%;
   height: 800px;
-  gap: 20%;
-  justify-content: center;
-  align-items: center;
+  gap: 15%;
+ 
 
   @media (max-width: 768px) {
-    flex-direction: column;
+  
     height: auto;
+    
   }
 `
 
-export const Dados = styled.p`
+export const DadosM = styled.p`
   font-size: 20px;
   color: #FFA000;
-  padding-top: 10px;
-  padding-left: 80px;
+  margin-top: 20px;
+  padding-left: 150px;
 
   @media (max-width: 768px) {
-    padding-left: 0;
-    text-align: center;
+    padding-left: 10px;
     margin-bottom: 10px;
   }
 `
+export const DadosJ = styled.p`
+  font-size: 20px;
+  color: #FFA000;
+  margin-top: 20px;
+  padding-left: 80px;
 
+  @media (max-width: 768px) {
+display: none;
+  }
+`
 export const Time = styled.p`
   display: flex;
   font-size: 20px;
   color: #FFA000;
-  padding-top: 10px;
+ margin-top: 20px;
 
   @media (max-width: 768px) {
-    justify-content: center;
+  display: none;
   }
 `
+export const TimeN = styled.p`
+font-size: 20px;
+  color: #FFA000;
+  margin-top: 20px;
+  padding-left: 80px;
+
+  @media (max-width: 768px) {
+    padding-left: 70px;
+    margin-bottom: 10px;
+  }
+`
+
