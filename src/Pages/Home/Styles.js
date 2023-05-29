@@ -1,192 +1,285 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    margin-top: 70px;
-    font-family: 'latoBold';
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 70px;
+  font-family: 'latoBold';
 `
 
 export const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    margin-top: 60px;
-    div {
-        margin-bottom: 15px;
-    }
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  margin-top: 60px;
+
+  div {
+    margin-bottom: 15px;
+  }
 `
 
 export const Rodape = styled.div`
-    background-color: #1F1A1A;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 70px;
-    font-family: 'latoBold';
-    width: 82%;
-    margin-left: 9%;
-    height: 250px;
+  background-color: #1F1A1A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'latoBold';
+  width: 82%;
+  margin-left: 9%;
+  height: 250px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+    height: 200px;
+  }
 `
 
 export const Pontoadm = styled.div`
-    background-color: #1F1A1A;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 70px;
-    font-family: 'latoBold';
-    width: 90%;
-    margin-left: 5%;
-    height: 250px;
+  background-color: #1F1A1A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  font-family: 'latoBold';
+  width: 90%;
+  margin-left: 5%;
+  height: 250px;
+
+  @media (max-width: 768px) {
+  height: 150px;
+  }
 `
 
 export const Titulo1 = styled.div`
-    text-align: center;
-    font-size: 25px;
-    height: 82px;
-    color: #FFA000;
+  text-align: center;
+  font-size: 25px;
+  height: 82px;
+  color: #FFA000;
+  margin-top: 10px;
 `
 
 export const Botaoadm = styled.button`
-    display: flex;
-    width: auto;
-    flex-direction: column;
-    border: none;
-    border-radius: 5px;
+  display: flex;
+  width: 120px;
+  flex-direction: column;
+  border: none;
+  border-radius: 5px;
+  height: 80px;
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 0;
+    width: 90%;
+    height: 40px;
+  }
 `
 
 export const PontoLogado = styled.div`
-    background-color: #1F1A1A;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 70px;
-    font-family: 'latoBold';
-    width: 90%;
-    margin-left: 15px;
-    height: 250px;
+  background-color: #1F1A1A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  font-family: 'latoBold';
+  width: 90%;
+  margin-left: 5%;
+  height: 250px;
 `
 
 export const Titulo2 = styled.div`
-    text-align: center;
-    font-size: 25px;
-    height: 82px;
-    color: #FFA000;
-    margin-top: 10px;
+  text-align: center;
+  font-size: 25px;
+  height: 82px;
+  color: #FFA000;
+  margin-top: 10px;
 `
 
 export const Labelj = styled.p`
-    color: #FFA000;
+  position: absolute;
+  top: 650px;
+  left: 8%;
+  color: #FFA000;
+  top: 650px;
+
+  @media (max-width: 768px) {
+    top: 580px;
+    left: 30%;
+  }
+  
 `
 
 export const Labelg = styled.p`
-    color: #FFA000;
+  position: absolute;
+  top: 700px;
+  left: 8%;
+  color: #FFA000;
+  
+  position: absolute;
+  
+
+  @media (max-width: 768px) {
+    top: 610px;
+    left: 30%;
+    
+  }
+  
 `
 
 export const Botaologado = styled.button`
-    border: none;
-    border-radius: 5px;
-    display: flex;
-    width: auto;
-    gap: 25px;
-    margin-top: 50px;
+   border: none;
+  border-radius: 5px;
+  display: flex;
+  width: 100px;
+  margin-left: 80%;
+  height: 25%;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 75px;
+    width: 90%;
+    height: 40px;
+  }
 `
 
 export const Botaoligado = styled.button`
-    border: none;
-    border-radius: 5px;
-    display: flex;
-    width: auto;
-    gap: 25px;
-    margin-top: 50px;
+ border: none;
+  border-radius: 5px;
+  display: flex;
+  width: 100px;
+  margin-left: 80%;
+  height: 25%;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 75px;
+    width: 90%;
+    height: 40px;
+  }
 `
 
 export const Titulo3 = styled.div`
-    text-align: center;
-    font-size: 25px;
-    height: 82px;
-    color: #FFA000;
-    margin-top: 10px;
+  text-align: center;
+  font-size: 25px;
+  height: 82px;
+  color: #FFA000;
+  margin-top: 10px;
 `
 
 export const PontoLigado = styled.div`
-    background-color: #1F1A1A;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 70px;
-    font-family: 'latoBold';
-    width: 90%;
-    margin-left: 15px;
-    height: 250px;
+  background-color: #1F1A1A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  font-family: 'latoBold';
+  width: 90%;
+  margin-left: 5%;
+  height: 250px;
 `
 
 export const Labela = styled.p`
-    color: #FFA000;
+  color: #FFA000;
+  top: 650px;
+  position: absolute;
+  @media (max-width: 768px) {
+    top: 630px;
+    left: 60%;
+  }
 `
+
 export const Labelb = styled.p`
-    position: absolute;
-    bottom: 420px;
-    right: 5%;
-    color: #FFA000;
+  top: 700px;
+  color: #FFA000;
+  position: absolute;
+  @media (max-width: 768px) {
+    top: 630px;
+    left: 10%;
+  }
 `
 
 export const Labelq = styled.p`
-    position: absolute;
-    bottom: 420px;
-    left: 5%;
-    color: #FFA000;
+  position: absolute;
+  top: 700px;
+  left: 8%;
+  color: #FFA000;
+  @media (max-width: 768px) {
+    top: 580px;
+    left: 35%;
+  }
 `
 
 export const Labelw = styled.p`
-    position: absolute;
-    bottom: 450px;
-    left: 5%;
-    color: #FFA000;
+  position: absolute;
+  left: 8%;
+  color: #FFA000;
+  top: 650px;
+  @media (max-width: 768px) {
+    top: 560px;
+    left: 35%;
+  }
 `
 
 export const Logados = styled.div`
-    background-color: #1F1A1A;
-    display: flex;
-    margin-top: 70px;
-    font-family: 'latoBold';
-    width: 90%;
-    margin-left: 5%;
-    height: 800px;
-    gap: 20%;
-    justify-content: center;
-    align-items: center;
+  background-color: #1F1A1A;
+  display: flex;
+  margin-top: 20px;
+  font-family: 'latoBold';
+  width: 90%;
+  margin-left: 5%;
+  height: 800px;
+  gap: 15%;
+ 
 
-    @media (max-width: 768px) {
-        flex-direction: column;
-        height: auto;
-    }
+  @media (max-width: 768px) {
+  
+    height: auto;
+    
+  }
 `
 
-export const Dados = styled.p`
-    font-size: 20px;
-    color: #FFA000;
-    padding-top: 10px;
-    padding-left: 80px;
+export const DadosM = styled.p`
+  font-size: 20px;
+  color: #FFA000;
+  margin-top: 20px;
+  padding-left: 150px;
 
-    @media (max-width: 768px) {
-        padding-left: 0;
-        text-align: center;
-        margin-bottom: 10px;
-    }
+  @media (max-width: 768px) {
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
 `
+export const DadosJ = styled.p`
+  font-size: 20px;
+  color: #FFA000;
+  margin-top: 20px;
+  padding-left: 80px;
 
+  @media (max-width: 768px) {
+display: none;
+  }
+`
 export const Time = styled.p`
-    display: flex;
-    font-size: 20px;
-    color: #FFA000;
-    padding-top: 10px;
+  display: flex;
+  font-size: 20px;
+  color: #FFA000;
+ margin-top: 20px;
 
-    @media (max-width: 768px) {
-        justify-content: center;
-    }
+  @media (max-width: 768px) {
+  display: none;
+  }
 `
+export const TimeN = styled.p`
+font-size: 20px;
+  color: #FFA000;
+  margin-top: 20px;
+  padding-left: 80px;
+
+  @media (max-width: 768px) {
+    padding-left: 70px;
+    margin-bottom: 10px;
+  }
+`
+

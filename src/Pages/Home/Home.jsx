@@ -19,7 +19,9 @@ import {
   Botaoligado,
   Logados,
   Time,
-  Dados,
+  TimeN,
+  DadosM,
+  DadosJ,
 } from "./Styles";
 import { BotaoGenerico } from "../../components";
 
@@ -27,66 +29,32 @@ function Home() {
   return (
     <Container>
       <Form>
-        <>
-          <Rodape></Rodape>
-
-          <Pontoadm>
-            <Titulo1>ADMINISTRE SEU PONTO</Titulo1>
-            <Botaoadm>
-              <BotaoGenerico
-                height="70px"
-                width="117px"
-                name="Login/Cadastre-se"
-                backgroundColor="#BC0E03"
-                color="#d9d9d9"
-                hoverBackgroundColor="#990D03"
-              />
-            </Botaoadm>
-          </Pontoadm>
-        </>
-
+        <Rodape></Rodape>
+        <PontoLigado>
+          <Titulo3>SEU PONTO ESTÁ LIGADO</Titulo3>
+          <Labelw> JOGADOR: </Labelw>
+          <Labelq> JOGO: </Labelq>
+          <Labelb> INÍCIO</Labelb>
+          <Labela> TEMPO </Labela>
+          <Botaoligado>
+            <BotaoGenerico
+              height="100%"
+              width="100%"
+              name="Desligar Ponto"
+              backgroundColor="#BC0E03"
+              color="#d9d9d9"
+              hoverBackgroundColor="#990D03"
+            />
+          </Botaoligado>
+        </PontoLigado>
         <Logados>
-          <Dados>JOGADOR</Dados>
-          <Dados>JOGO</Dados>
+          <DadosM>JOGADOR</DadosM>
+          <DadosJ>JOGO</DadosJ>
           <Time>INÍCIO</Time>
-          <Time>TEMPO</Time>
+          <TimeN>TEMPO</TimeN>
         </Logados>
       </Form>
     </Container>
-
-    // Ligar o ponto
-    /*
-<PontoLogado>
-      <Titulo2>
-       LIGUE SEU PONTO
-      </Titulo2>
-      <Labelj> JOGADOR: </Labelj>
-      <Labelg> JOGO: </Labelg>
-
-      <Botaologado> 
-        <BotaoGenerico height = "56px" width ="117px" name= "LIGAR PONTO" backgroundColor= "#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03" />
-        </Botaologado>
-      
-      
-    </PontoLogado>
- */
-
-    // Desligar o ponto
-    /*
-<PontoLigado>
-      <Titulo3>
-      SEU PONTO ESTÁ LIGADO
-      </Titulo3>
-      <Labelw> JOGADOR: </Labelw>
-      <Labelq> JOGO: </Labelq>
-      <Labelb> INÍCIO</Labelb>
-      <Labela> TEMPO </Labela>
-      <Botaoligado> 
-       <BotaoGenerico height = "56px" width ="117px" name= "Desligar Ponto" backgroundColor= "#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03" />
-        </Botaoligado>
-      
-      </PontoLigado>
-     */
   );
 }
 
