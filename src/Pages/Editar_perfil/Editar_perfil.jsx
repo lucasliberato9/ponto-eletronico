@@ -16,7 +16,7 @@ function Editar_perfil() {
 
   const [nome, setNome] = useState("");
   const [nick, setNick] = useState("");
-  const [emailedit, setEmailEdit] = useState("");
+  const [emailEdit, setEmailEdit] = useState("");
   const [jogo, setJogo] = useState("");
   const [elo, setElo] = useState("");
   const [senhaEditarPerfil, setSenhaEditarPerfil] = useState("");
@@ -44,7 +44,7 @@ function Editar_perfil() {
         </DivInputs>
 
         <DivEmail>
-          <Label htmlFor="emailedit"> Email: </Label>
+          <Label htmlFor="emailEdit"> Email: </Label>
           <Input id="emailEdit" type="email" placeholder="seuemail@email.com" required onChange={(e) => setEmailEdit(e.target.value)}></Input>
         </DivEmail>
 

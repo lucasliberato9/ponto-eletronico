@@ -1,18 +1,48 @@
 import { Container, Titulo, Form, Campo, Label, Input, DivButton } from "./Styles";
 import { BotaoGenerico } from "../../components";
 import { useState } from "react";
+import api from "../../services/api";
+import useAuthStore from "../../stores/auth";
+
 
 function Login() {
 
 const [emailLogin, setEmailLogin] = useState("");
 const [senhaLogin, setSenhaLogin] = useState("");
+const [carregando, setCarregando] = useState(false);
+const token = useAuthStore((state) => state.token);
+const usuario = useAuthStore((state) => state.usuario);
+const setToken = useAuthStore((state) => state.setToken);
 
 const handleSubmit = async (e) => {
   e.preventDefault();
-  console.log({emailLogin, senhaLogin});
+  
+
+  try {
+    setCarregando(true);
+    const resposta = await api.post("/login", {emailLogin, senhaLogin} );
+    const {token} = res.data;
+
+    setToken(token);
+    
+  } catch (erro) {
+    console.error(erro);
+    alert(erro.message);
+  } finally{
+    setCarregando(false);
+  }
 }
+
+if (carregando) 
+  return (
+    <Container>
+      <h1> Carregando... </h1>
+    </Container>
+);
+
   return (
   
+   
     <Container>
       <Titulo>
         Faça aqui o seu login!
@@ -27,7 +57,7 @@ const handleSubmit = async (e) => {
           <Label htmlFor="senhaLogin"> Senha: </Label>
           <Input id="senhaLogin" type= "password" placeholder="Digite sua senha" required onChange={(e) => setSenhaLogin(e.target.value)}></Input>
         </Campo>
-        
+    
       </Form>
       <DivButton type ="submit">
         <BotaoGenerico name= "Fazer Login" />
