@@ -57,10 +57,9 @@ if (carregando)
           <Label htmlFor="senhaLogin"> Senha: </Label>
           <Input id="senhaLogin" type= "password" placeholder="Digite sua senha" required onChange={(e) => setSenhaLogin(e.target.value)}></Input>
         </Campo>
-    
+        <BotaoGenerico name= "Fazer Login" />
       </Form>
       <DivButton type ="submit">
-        <BotaoGenerico name= "Fazer Login" />
         <BotaoGenerico name= "Quero me cadastrar" backgroundColor= "#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03"/>
       </DivButton>
     </Container>
