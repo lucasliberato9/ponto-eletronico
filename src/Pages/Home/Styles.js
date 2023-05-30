@@ -232,54 +232,17 @@ export const Logados = styled.div`
   height: 800px;
   gap: 15%;
  
-
   @media (max-width: 768px) {
-  
     height: auto;
-    
   }
 `
-
-export const DadosM = styled.p`
-  font-size: 20px;
-  color: #FFA000;
-  margin-top: 20px;
-  padding-left: 150px;
-
-  @media (max-width: 768px) {
-    padding-left: 10px;
-    margin-bottom: 10px;
-  }
+export const Jogador = styled.div `
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 100px;
+width: 80%;
+height: 60px;
+background-color: yellow;
 `
-export const DadosJ = styled.p`
-  font-size: 20px;
-  color: #FFA000;
-  margin-top: 20px;
-  padding-left: 80px;
-
-  @media (max-width: 768px) {
-display: none;
-  }
-`
-export const Time = styled.p`
-  display: flex;
-  font-size: 20px;
-  color: #FFA000;
- margin-top: 20px;
-
-  @media (max-width: 768px) {
-  display: none;
-  }
-`
-export const TimeN = styled.p`
-font-size: 20px;
-  color: #FFA000;
-  margin-top: 20px;
-  padding-left: 80px;
-
-  @media (max-width: 768px) {
-    padding-left: 70px;
-    margin-bottom: 10px;
-  }
-`
-

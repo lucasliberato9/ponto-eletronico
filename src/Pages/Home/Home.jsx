@@ -17,11 +17,8 @@ import {
   PontoLigado,
   Titulo3,
   Botaoligado,
-  Logados,
-  Time,
-  TimeN,
-  DadosM,
-  DadosJ,
+  Logados
+  
 } from "./Styles";
 import { BotaoGenerico } from "../../components";
 
@@ -48,10 +45,7 @@ function Home() {
           </Botaoligado>
         </PontoLigado>
         <Logados>
-          <DadosM>JOGADOR</DadosM>
-          <DadosJ>JOGO</DadosJ>
-          <Time>INÍCIO</Time>
-          <TimeN>TEMPO</TimeN>
+          
         </Logados>
       </Form>
     </Container>
