@@ -16,10 +16,10 @@ function Editar_perfil() {
 
   const [nome, setNome] = useState("");
   const [nick, setNick] = useState("");
-  const [emailEdit, setEmailEdit] = useState("");
+  const [emailedit, setEmailEdit] = useState("");
   const [jogo, setJogo] = useState("");
   const [elo, setElo] = useState("");
-  const [senhaEdit, setSenhaEdit] = useState("");
+  const [senhaEditarPerfil, setSenhaEditarPerfil] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -44,7 +44,7 @@ function Editar_perfil() {
         </DivInputs>
 
         <DivEmail>
-          <Label htmlFor="emailEdit"> Email: </Label>
+          <Label htmlFor="emailedit"> Email: </Label>
           <Input id="emailEdit" type="email" placeholder="seuemail@email.com" required onChange={(e) => setEmailEdit(e.target.value)}></Input>
         </DivEmail>
 
@@ -62,13 +62,13 @@ function Editar_perfil() {
 
         <DivInputs>
           <DivRow>
-            <Label htmlFor="senhaEdit"> Senha: </Label>
-            <Input id="senhaEdit" type="password" placeHolder="Escolha sua nova senha" required onChange={(e)=> setSenhaEdit(e.target.value)}></Input>
+            <Label htmlFor="senhaEditarPerfil"> Senha: </Label>
+            <Input id="senhaEditarPerfil" type="password" placeHolder="Escolha sua nova senha" required onChange={(e)=> setSenhaEditarPerfil(e.target.value)}></Input>
           </DivRow>
 
           <DivRow>
-            <Label htmlFor="senhaEdit"> Confirmação de senha: </Label>
-            <Input  id="senhaEdit" type="password" placeholder= "Confirme sua nova senha" required onChange={(e)=> setSenhaEdit(e.target.value) }></Input>
+            <Label htmlFor="senhaEditarPerfil"> Confirmação de senha: </Label>
+            <Input  id="senhaEditarPerfil" type="password" placeholder= "Confirme sua nova senha" required onChange={(e)=> setSenhaEditarPerfil(e.target.value) }></Input>
           </DivRow>
         </DivInputs>
       </Form>
