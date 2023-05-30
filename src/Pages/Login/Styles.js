@@ -18,13 +18,18 @@ export const Form = styled.form`
     flex-direction: column;
     width: 60%;
     justify-content: center;
-    gap: 15px;
+    align-items: center;
+    gap: 25px;
     @media (max-width: 750px) {
         width: 90%;
     }
 `
 
-export const Campo = styled.div``
+export const Campo = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+`
 
 export const Label = styled.label`
     color: #FFA000;
@@ -46,5 +51,5 @@ export const DivButton = styled.div`
     flex-direction: column;
     gap: 25px;
     margin-top: 50px;
-   
+    align-items: center;
 `
