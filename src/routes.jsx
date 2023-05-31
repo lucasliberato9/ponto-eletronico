@@ -9,7 +9,7 @@ import Home from "./Pages/Home/Home";
 import Cadastro from "./Pages/Cadastro/Cadastro";
 import Login from "./Pages/Login/Login";
 import Editar_perfil from "./Pages/Editar_perfil/Editar_perfil";
-import { App } from "./App";
+import App from "./App";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
