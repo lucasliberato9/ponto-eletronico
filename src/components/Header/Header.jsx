@@ -32,12 +32,12 @@ function Header() {
             {!!usuario && ( //Caso o usuário esteja logado
                 <DivButton>
                     <BotaoGenerico onClick={editarperfil} type= "button" name= "Editar Perfil" width= "50%"/>
-                    <BotaoGenerico onClick={logout} type= "button" name= "Logout" width= "30%"backgroundColor= "#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03"/>
+                    <BotaoGenerico onClick={logout} type= "button" name= "Logout" width= "35%"backgroundColor= "#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03"/>
                 </DivButton>
             )}
             {!usuario && ( //Caso o usuário NÃO esteja logado
                 <DivButton>
-                    <BotaoGenerico onClick={login} type= "button" name= "Fazer Login Cadastre-se" width= "50%"/>
+                    <BotaoGenerico onClick={login} type= "button" name= "Fazer Login Cadastre-se" width= "75%"/>
                 </DivButton>
             )}
 
