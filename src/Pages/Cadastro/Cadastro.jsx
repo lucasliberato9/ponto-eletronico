@@ -1,20 +1,41 @@
 import { Container, Titulo, Form, Label, Input, DivInputs, DivRow, DivEmail, DivButton } from "./Styles.js";
 import { BotaoGenerico } from "../../components";
 import { useState } from "react";
+import { Axios } from "axios";
+import api from "../../services/api.js";
 
 
 function Cadastro() {
   const [nome, setNome] = useState("");
   const [nick, setNick] = useState("");
-  const [emailCadastro, setEmailCadastro] = useState("");
+  const [email, setEmailCadastro] = useState("");
   const [jogo, setJogo] = useState("");
   const [elo, setElo] = useState("");
-  const [senhaCadastro, setSenhaCadastro] = useState("");
+  const [senha, setSenhaCadastro] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({emailCadastro, senhaCadastro, nome, nick, jogo, elo});
-  }
+
+  
+    const usuario = {
+      nome,
+      nick,
+      email,
+      jogo,
+      elo,
+      senha
+    };
+
+  
+    try {
+      const response = await api.post("./cadastro", {usuario});
+
+      console.log("Dados enviados com sucesso!", response.data);
+    } catch (error) {
+      console.log("Ocorreu um erro ao enviar os dados:", error);
+    }
+  };
+
   return (
 
     <Container>
@@ -69,21 +90,19 @@ function Cadastro() {
 
         <DivInputs>
           <DivRow>
-            <Label htmlFor="senhaCadastro"> Senha: </Label>
-            <Input id="senhaCadastro" type="password" placeHolder="Escolha uma senha" required onChange={(e) => setSenhaCadastro(e.target.value)}></Input>
+            <Label htmlFor="senha"> Senha: </Label>
+            <Input id="senha" type="password" placeHolder="Escolha uma senha" required onChange={(e) => setSenhaCadastro(e.target.value)}></Input>
           </DivRow>
 
           <DivRow>
-            <Label htmlFor="senhaCadastro"> Confirmação de senha: </Label>
-            <Input  id="senhaCadastro" type="password" placeholder= "Confirme sua senha" required onChange={(e)=> setSenhaCadastro(e.target.value)}></Input>
+            <Label htmlFor="senha"> Confirmação de senha: </Label>
+            <Input  id="senha" type="password" placeholder= "Confirme sua senha" required onChange={(e)=> setSenhaCadastro(e.target.value)}></Input>
           </DivRow>
         </DivInputs>
 
-      </Form>
-
-      <DivButton>
         <BotaoGenerico name= "Enviar" />
-      </DivButton> 
+
+      </Form>
 
     </Container>
   ) 
