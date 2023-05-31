@@ -1,20 +1,51 @@
 import { Container, Titulo, Form, Label, Input, DivInputs, DivRow, DivEmail, DivButton } from "./Styles.js";
 import { BotaoGenerico } from "../../components";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"
+import api from "../../services/api.js";
 
 
 function Cadastro() {
   const [nome, setNome] = useState("");
-  const [nick, setNick] = useState("");
-  const [emailCadastro, setEmailCadastro] = useState("");
+  const [nickname, setNickname] = useState("");
+  const [email, setEmail] = useState("");
   const [jogo, setJogo] = useState("");
   const [elo, setElo] = useState("");
-  const [senhaCadastro, setSenhaCadastro] = useState("");
+  const [senha, setSenha] = useState("");
+  const [carregando, setCarregando] = useState(false);
+  const navigate = useNavigate();
+
+  const usuario = {
+    nome,
+    nickname,
+    email,
+    jogo,
+    elo,
+    senha
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({emailCadastro, senhaCadastro, nome, nick, jogo, elo});
-  }
+
+    try {
+      setCarregando(true);
+      const res = await api.post("/usuarios", {usuario});
+      console.log("Dados enviados!", res.data);
+      navigate("/login");
+    } catch (erro) {
+      console.log("Erro ao enviar os dados:", erro);
+    } finally{
+      setCarregando(false);
+    }
+  };
+
+  if (carregando) 
+    return (
+      <Container>
+        <h1> Salvando dados... </h1>
+      </Container>
+  );
+
   return (
 
     <Container>
@@ -32,14 +63,14 @@ function Cadastro() {
           </DivRow>
 
           <DivRow>
-            <Label htmlFor="nick"> Nickname: </Label>
-            <Input id="nick" placeholder= "Digite seu nickname" required onChange={(e) => setNick(e.target.value)}></Input>
+            <Label htmlFor="nickname"> Nickname: </Label>
+            <Input id="nickname" placeholder= "Digite seu nickname" required onChange={(e) => setNickname(e.target.value)}></Input>
           </DivRow>
         </DivInputs>
 
         <DivEmail>
           <Label htmlFor="email"> Email: </Label>
-          <Input id="email" type="email" placeholder="seuemail@email.com" required onChange={(e)=> setEmailCadastro(e.target.value)}></Input>
+          <Input id="email" type="email" placeholder="seuemail@email.com" required onChange={(e)=> setEmail(e.target.value)}></Input>
         </DivEmail>
 
         <DivInputs>
@@ -69,21 +100,15 @@ function Cadastro() {
 
         <DivInputs>
           <DivRow>
-            <Label htmlFor="senhaCadastro"> Senha: </Label>
-            <Input id="senhaCadastro" type="password" placeHolder="Escolha uma senha" required onChange={(e) => setSenhaCadastro(e.target.value)}></Input>
-          </DivRow>
-
-          <DivRow>
-            <Label htmlFor="senhaCadastro"> Confirmação de senha: </Label>
-            <Input  id="senhaCadastro" type="password" placeholder= "Confirme sua senha" required onChange={(e)=> setSenhaCadastro(e.target.value)}></Input>
+            <Label htmlFor="senha"> Senha: </Label>
+            <Input id="senha" type="password" placeHolder="Escolha uma senha" required onChange={(e) => setSenha(e.target.value)}></Input>
           </DivRow>
         </DivInputs>
 
-      </Form>
-
-      <DivButton>
+        <DivButton/>
+        
         <BotaoGenerico name= "Enviar" />
-      </DivButton> 
+      </Form>
 
     </Container>
   ) 

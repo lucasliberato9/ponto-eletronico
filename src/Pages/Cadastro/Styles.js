@@ -22,6 +22,7 @@ export const Form = styled.form`
   width: 75%;
   justify-content: center;
   gap: 15px;
+  align-items: center;
   @media (max-width: 750px) {
     width: 70%;
   }
@@ -70,6 +71,5 @@ export const DivButton = styled.div`
   width: auto;
   flex-direction: row;
   gap: 60px;
-  margin-top: 48px;
-  margin-bottom: 50px;
+  margin-top: 30px;
 `;

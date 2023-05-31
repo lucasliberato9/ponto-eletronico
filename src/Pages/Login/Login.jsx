@@ -12,9 +12,11 @@ const [senha, setSenha] = useState("");
 const [carregando, setCarregando] = useState(false);
 const navigate = useNavigate();
 const setToken = useAuthStore((state) => state.setToken);
-const token = useAuthStore((state) => state.token);
-const usuario = useAuthStore((state) => state.usuario);
-console.log({ token, usuario});
+// const token = useAuthStore((state) => state.token);
+// const usuario = useAuthStore((state) => state.usuario);
+const cadastro = () => {
+  navigate("/cadastro");
+}
 
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -23,7 +25,6 @@ const handleSubmit = async (e) => {
     setCarregando(true);
     const res = await api.post("/login", {email, senha} );
     const {token} = res.data;
-    console.log({token});
     setToken(token);
     navigate("/");
 
@@ -60,7 +61,7 @@ const handleSubmit = async (e) => {
         <BotaoGenerico name= "Fazer Login" />
       </Form>
       <DivButton>
-        <BotaoGenerico name= "Quero me cadastrar" backgroundColor= "#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03"/>
+        <BotaoGenerico onClick={cadastro} type = "button" name= "Quero me cadastrar" backgroundColor= "#BC0E03" color="#d9d9d9" hoverBackgroundColor="#990D03"/>
       </DivButton>
     </Container>
   
