@@ -1,7 +1,6 @@
 import { Container, Titulo, Form, Label, Input, DivInputs, DivRow, DivEmail, DivButton } from "./Styles.js";
 import { BotaoGenerico } from "../../components";
 import { useState } from "react";
-import { Axios } from "axios";
 import api from "../../services/api.js";
 
 
@@ -12,11 +11,11 @@ function Cadastro() {
   const [jogo, setJogo] = useState("");
   const [elo, setElo] = useState("");
   const [senha, setSenhaCadastro] = useState("");
+  const [carregando, setCarregando] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-  
     const usuario = {
       nome,
       nick,
@@ -26,16 +25,24 @@ function Cadastro() {
       senha
     };
 
-  
     try {
-      const response = await api.post("./cadastro", {usuario});
+      setCarregando(true);
+      const res = await api.post("/cadastro", {usuarios});
 
-      console.log("Dados enviados com sucesso!", response.data);
-    } catch (error) {
-      console.log("Ocorreu um erro ao enviar os dados:", error);
+      console.log("Dados enviados!", res.data);
+    } catch (erro) {
+      console.log("Erro ao enviar os dados:", erro);
+    } finally{
+      setCarregando(false);
     }
   };
 
+  if (carregando) 
+    return (
+      <Container>
+        <h1> Salvando dados... </h1>
+      </Container>
+  );
   return (
 
     <Container>
