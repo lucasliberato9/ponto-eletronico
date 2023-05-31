@@ -26,7 +26,7 @@ export const Titulo = styled.h1`
           font-weight: normal;
           font-style: normal;
   } 
-  width: 150px;
+  width: 160px;
   font-family: 'latoBold';
   font-style: bold;
   font-size: 20px;
@@ -35,13 +35,15 @@ export const Titulo = styled.h1`
   text-align: center;
   color: #E7E7E7;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 5px;
 `;
 
 export const DivButton = styled.div`
   display: flex;
-  width: auto;
+  width: 200px;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   margin-right: 1%;
+  gap: 7px;
 `;

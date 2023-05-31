@@ -18,18 +18,18 @@ console.log({ token, usuario});
 
 const handleSubmit = async (e) => {
   e.preventDefault();
-  
+
   try {
     setCarregando(true);
     const res = await api.post("/login", {email, senha} );
     const {token} = res.data;
-
+    console.log({token});
     setToken(token);
     navigate("/");
 
   } catch (erro) {
     console.error(erro);
-    alert(erro.message);
+    alert(erro.response.data.message);
   } finally {
     setCarregando(false);
   }
