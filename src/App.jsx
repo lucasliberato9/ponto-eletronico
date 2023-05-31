@@ -1,11 +1,11 @@
 import { Header } from "./components";
-import Routes from "./routes";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Header />
-      <Routes />
+      <Outlet />
     </>
   );
 }

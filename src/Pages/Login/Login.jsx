@@ -7,26 +7,29 @@ import {useNavigate} from "react-router-dom";
 
 export default function Login() {
 
-const [email, setEmailLogin] = useState("");
-const [senha, setSenhaLogin] = useState("");
+const [email, setEmail] = useState("");
+const [senha, setSenha] = useState("");
 const [carregando, setCarregando] = useState(false);
 const navigate = useNavigate();
 const setToken = useAuthStore((state) => state.setToken);
+const token = useAuthStore((state) => state.token);
+const usuario = useAuthStore((state) => state.usuario);
+console.log({ token, usuario});
 
 const handleSubmit = async (e) => {
   e.preventDefault();
-  
+
   try {
     setCarregando(true);
     const res = await api.post("/login", {email, senha} );
     const {token} = res.data;
-
+    console.log({token});
     setToken(token);
     navigate("/");
 
   } catch (erro) {
     console.error(erro);
-    alert(erro.message);
+    alert(erro.response.data.message);
   } finally {
     setCarregando(false);
   }
@@ -48,11 +51,11 @@ const handleSubmit = async (e) => {
       <Form onSubmit={handleSubmit}>
         <Campo>
           <Label htmlFor="email"> Email: </Label>
-          <Input id="email" type="email" placeholder= "seuemail@email.com" required onChange={(e)=> setEmailLogin(e.target.value)}></Input>
+          <Input id="email" type="email" placeholder= "seuemail@email.com" required onChange={(e)=> setEmail(e.target.value)}></Input>
         </Campo>
         <Campo>
           <Label htmlFor="senha"> Senha: </Label>
-          <Input id="senha" type= "password" placeholder="Digite sua senha" required onChange={(e) => setSenhaLogin(e.target.value)}></Input>
+          <Input id="senha" type= "password" placeholder="Digite sua senha" required onChange={(e) => setSenha(e.target.value)}></Input>
         </Campo>
         <BotaoGenerico name= "Fazer Login" />
       </Form>
