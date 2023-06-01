@@ -32,12 +32,14 @@ function Header() {
             type="button"
             name="Editar Perfil"
             width="50%"
+            widthResponsive715="50%"
           />
           <BotaoGenerico
             onClick={logout}
             type="button"
             name="Logout"
             width="35%"
+            widthResponsive715="35%"
             backgroundColor="#BC0E03"
             color="#d9d9d9"
             hoverBackgroundColor="#990D03"
@@ -51,6 +53,7 @@ function Header() {
             type="button"
             name="Fazer Login Cadastre-se"
             width="75%"
+            widthResponsive715="75%"
           />
         </DivButton>
       )}
