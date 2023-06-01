@@ -1,53 +1,55 @@
 import {
   Container,
-  Form,
-  Rodape,
-  Botaoadm,
-  Pontoadm,
-  Titulo1,
-  Botaologado,
-  PontoLogado,
-  Titulo2,
-  Labelj,
-  Labelg,
-  Labelb,
-  Labela,
-  Labelq,
-  Labelw,
-  PontoLigado,
-  Titulo3,
-  Botaoligado,
-  Logados
-  
+  TituloPonto,
+  DivImg,
+  MeuPonto,
+  UsuarioPonto,
+  DadosBotão,
+  TituloVar,
+  JogadorJogo,
+  NomesVar,
+  BotãoLigar,
+  ListaPonto,
 } from "./Styles";
 import { BotaoGenerico } from "../../components";
 
 function Home() {
   return (
     <Container>
-      <Form>
-        <Rodape></Rodape>
-        <PontoLigado>
-          <Titulo3>SEU PONTO ESTÁ LIGADO</Titulo3>
-          <Labelw> JOGADOR: </Labelw>
-          <Labelq> JOGO: </Labelq>
-          <Labelb> INÍCIO</Labelb>
-          <Labela> TEMPO </Labela>
-          <Botaoligado>
+      <MeuPonto>
+        <TituloPonto> LIGUE SEU PONTO </TituloPonto>
+
+        <DadosBotão>
+          <UsuarioPonto>
+            <TituloVar>
+              <JogadorJogo> Jogador: </JogadorJogo>
+              <NomesVar> Teste123 </NomesVar>
+            </TituloVar>
+
+            <TituloVar>
+              <JogadorJogo> Jogo: </JogadorJogo>
+              <NomesVar> Teste123 </NomesVar>
+            </TituloVar>
+          </UsuarioPonto>
+
+          <BotãoLigar>
             <BotaoGenerico
-              height="100%"
-              width="100%"
-              name="Desligar Ponto"
+              type="button"
+              name="Ligar Ponto"
               backgroundColor="#BC0E03"
               color="#d9d9d9"
               hoverBackgroundColor="#990D03"
+              width="160px"
+              widthResponsive715="200px"
+              height="80px"
+              heightResponsive715="50px"
+              fontSize="20px"
             />
-          </Botaoligado>
-        </PontoLigado>
-        <Logados>
-          
-        </Logados>
-      </Form>
+          </BotãoLigar>
+        </DadosBotão>
+      </MeuPonto>
+
+      <ListaPonto></ListaPonto>
     </Container>
   );
 }
