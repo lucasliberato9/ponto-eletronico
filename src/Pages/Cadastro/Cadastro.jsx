@@ -15,21 +15,12 @@ function Cadastro() {
   const [carregando, setCarregando] = useState(false);
   const navigate = useNavigate();
 
-  const usuario = {
-    nome,
-    nickname,
-    email,
-    jogo,
-    elo,
-    senha
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       setCarregando(true);
-      const res = await api.post("/usuarios", {usuario});
+      const res = await api.post("/usuarios", {nome, nickname, email, jogo, elo, senha});
       console.log("Dados enviados!", res.data);
       navigate("/login");
     } catch (erro) {
@@ -84,10 +75,11 @@ function Cadastro() {
               onChange={(e) => setJogo(e.target.value)}
             ></Input>
             <datalist id="jogos">
+              <option value="FIFA 23" />
               <option value="Fortnite" />
               <option value="League of Legends" />
+              <option value="RainbowSix: Siege" />
               <option value="Valorant" />
-              <option value="R6" />
             </datalist>
           </DivRow>
 
