@@ -5,20 +5,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  text-align: center;
   align-items: center;
   margin-top: 70px;
   font-family: "latoBold";
-`;
-export const TituloPonto = styled.div`
-  display: flex;
-  color: #ffa000;
-  text-align: center;
-  align-content: center;
-  align-self: center;
-  font-size: 55px;
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
 `;
 export const DivImg = styled.div`
   display: flex;
@@ -26,27 +16,42 @@ export const DivImg = styled.div`
   height: 273px;
   align-self: center;
 `;
+
+// Início das divs da HOME - LIGUE SEU PONTO
+
+export const TituloPonto = styled.div`
+  display: flex;
+  color: #ffa000;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+`;
 export const MeuPonto = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 65%;
   align-items: center;
   background-color: #1f1a1a;
   height: auto;
+  margin-bottom: 20px;
+  font-size: 25px;
 `;
 export const JogadorJogo = styled.div`
   display: flex;
   color: #ffa000;
   text-align: left;
-  font-size: 35px;
   width: auto;
   height: auto;
 `;
 export const NomesVar = styled.div`
   display: flex;
+  font-family: "latoRegular";
   color: white;
   text-align: left;
-  font-size: 35px;
   width: auto;
   height: auto;
 `;
@@ -56,19 +61,54 @@ export const TituloVar = styled.div`
   gap: 5px;
   color: #ffa000;
   text-align: left;
-  font-size: 35px;
   width: 100%;
   height: auto;
+  margin-bottom: 20px;
+  @media (max-width: 715px) {
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+  }
+`;
+export const DadosBotão = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  color: #ffa000;
+  width: 100%;
+  height: auto;
+  @media (max-width: 715px) {
+    flex-direction: column;
+  }
 `;
 export const UsuarioPonto = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
-  gap: 15px;
   align-items: center;
   background-color: #1f1a1a;
   height: auto;
   margin-top: 20px;
+  margin-left: 30px;
+  @media (max-width: 715px) {
+    margin-left: 0px;
+    justify-content: center;
+    align-self: center;
+  }
+`;
+export const BotãoLigar = styled.div`
+  display: flex;
+  width: 100%;
+  background-color: #1f1a1a;
+  height: auto;
+  align-items: center;
+  justify-content: end;
+  margin-right: 22px;
+  @media (max-width: 715px) {
+    justify-content: center;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
 `;
 export const ListaPonto = styled.div`
   display: flex;
@@ -78,6 +118,8 @@ export const ListaPonto = styled.div`
   background-color: #1f1a1a;
   height: auto;
 `;
+
+// Fim das divs da HOME - LIGUE SEU PONTO
 
 // export const Pontoadm = styled.div`
 // background-color: #1f1a1a;
