@@ -6,7 +6,7 @@ import api from "../../services/api.js";
 
 function Cadastro() {
   const [nome, setNome] = useState("");
-  const [nick, setNick] = useState("");
+  const [nickname, setNickname] = useState("");
   const [email, setEmailCadastro] = useState("");
   const [jogo, setJogo] = useState("");
   const [elo, setElo] = useState("");
@@ -16,18 +16,11 @@ function Cadastro() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const usuario = {
-      nome,
-      nick,
-      email,
-      jogo,
-      elo,
-      senha
-    };
+ 
 
     try {
       setCarregando(true);
-      const res = await api.post("/cadastro", {usuarios});
+      const res = await api.post("/cadastro", {nome, nickname, email, jogo, elo});
 
       console.log("Dados enviados!", res.data);
     } catch (erro) {
@@ -60,8 +53,8 @@ function Cadastro() {
           </DivRow>
 
           <DivRow>
-            <Label htmlFor="nick"> Nickname: </Label>
-            <Input id="nick" placeholder= "Digite seu nickname" required onChange={(e) => setNick(e.target.value)}></Input>
+            <Label htmlFor="nickname"> Nickname: </Label>
+            <Input id="nickname" placeholder= "Digite seu nickname" required onChange={(e) => setNickname(e.target.value)}></Input>
           </DivRow>
         </DivInputs>
 
@@ -101,13 +94,10 @@ function Cadastro() {
             <Input id="senha" type="password" placeHolder="Escolha uma senha" required onChange={(e) => setSenhaCadastro(e.target.value)}></Input>
           </DivRow>
 
-          <DivRow>
-            <Label htmlFor="senha"> Confirmação de senha: </Label>
-            <Input  id="senha" type="password" placeholder= "Confirme sua senha" required onChange={(e)=> setSenhaCadastro(e.target.value)}></Input>
-          </DivRow>
+          <BotaoGenerico name= "Enviar" />
         </DivInputs>
 
-        <BotaoGenerico name= "Enviar" />
+     
 
       </Form>
 

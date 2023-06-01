@@ -12,19 +12,21 @@ import {
 import { BotaoGenerico } from "../../components";
 import { useState } from "react";
 
+
 function Editar_perfil() {
 
   const [nome, setNome] = useState("");
   const [nick, setNick] = useState("");
-  const [emailEdit, setEmailEdit] = useState("");
+  const [email, setEmailEdit] = useState("");
   const [jogo, setJogo] = useState("");
   const [elo, setElo] = useState("");
-  const [senhaEditarPerfil, setSenhaEditarPerfil] = useState("");
+  const [senha, setSenhaEditarPerfil] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({emailCadastro, senhaCadastro, nome, nick, jogo, elo});
+    console.log({email, senha, nome, nick, jogo, elo});
   }
+
 
   return (
     <Container>
@@ -44,8 +46,8 @@ function Editar_perfil() {
         </DivInputs>
 
         <DivEmail>
-          <Label htmlFor="emailEdit"> Email: </Label>
-          <Input id="emailEdit" type="email" placeholder="seuemail@email.com" required onChange={(e) => setEmailEdit(e.target.value)}></Input>
+          <Label htmlFor="email"> Email: </Label>
+          <Input id="email" type="email" placeholder="seuemail@email.com" required onChange={(e) => setEmailEdit(e.target.value)}></Input>
         </DivEmail>
 
         <DivInputs>
@@ -62,13 +64,13 @@ function Editar_perfil() {
 
         <DivInputs>
           <DivRow>
-            <Label htmlFor="senhaEditarPerfil"> Senha: </Label>
-            <Input id="senhaEditarPerfil" type="password" placeHolder="Escolha sua nova senha" required onChange={(e)=> setSenhaEditarPerfil(e.target.value)}></Input>
+            <Label htmlFor="senha"> Senha: </Label>
+            <Input id="senha" type="password" placeHolder="Escolha sua nova senha" required onChange={(e)=> setSenhaEditarPerfil(e.target.value)}></Input>
           </DivRow>
 
           <DivRow>
-            <Label htmlFor="senhaEditarPerfil"> Confirmação de senha: </Label>
-            <Input  id="senhaEditarPerfil" type="password" placeholder= "Confirme sua nova senha" required onChange={(e)=> setSenhaEditarPerfil(e.target.value) }></Input>
+            <Label htmlFor="senha"> Confirmação de senha: </Label>
+            <Input  id="senha" type="password" placeholder= "Confirme sua nova senha" required onChange={(e)=> setSenhaEditarPerfil(e.target.value) }></Input>
           </DivRow>
         </DivInputs>
       </Form>
