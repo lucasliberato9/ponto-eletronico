@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import fundoHeader_full from "../../assets/Header_full.png";
 import fundoHeader_mid from "../../assets/Header_mid.png";
+import fundoHeader_mini from "../../assets/mini-header.png";
 import LatoBold from "../../fonts/LatoBlack.ttf"
 
 export const Container = styled.div`
@@ -16,6 +17,10 @@ export const Container = styled.div`
 
     @media (max-width: 550px) {
       background-image: url(${fundoHeader_mid}); 
+    }
+
+    @media (max-width: 419px) {
+      background-image: url(${fundoHeader_mini}); 
     }
 `;
 
@@ -39,9 +44,10 @@ export const Titulo = styled.h1`
 
 export const DivButton = styled.div`
   display: flex;
-  width: auto;
+  width: 150px;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 1%;
+  margin-right: 3%;
+  gap: 7px;
 `;
