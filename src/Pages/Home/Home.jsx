@@ -26,7 +26,7 @@ import {Link, useNavigate} from "react-router-dom";
 import useAuthStore from "../../stores/auth";
 
 function Home() {
-  // const usuario = useAuthStore((state) => state.usuario);
+  const usuario = useAuthStore((state) => state.usuario);
   // const sessao = useAuthStore((state) => state.sessao);
   const navigate = useNavigate();
 
@@ -39,7 +39,7 @@ function Home() {
 
       <DivImg></DivImg>
 
-      {/* {!usuario && ( */}
+      {!usuario && (
         <MeuPonto>
           <TituloPonto> ADMINISTRE SEU PONTO </TituloPonto>
 
@@ -63,11 +63,9 @@ function Home() {
             />
           </BotãoLogin>
         </MeuPonto>
-      {/* )} */}
+      )}
 
-      {/* {!!usuario && ( */}
-
-        {/* // !sessao && */}
+      {!!usuario && (// !sessao && // Ativa se existir usuário mas não existir sessão
 
         <MeuPonto>
           <TituloPonto> LIGUE SEU PONTO </TituloPonto>
@@ -102,10 +100,10 @@ function Home() {
             </BotãoLigar>
           </DadosBotão>
         </MeuPonto>
-      {/* )} */}
+      )}
 
-      {/* {!!usuario && ( */}
-        {/* // !!sessao &&  */}
+      {!!usuario && (// !!sessao &&  // Ativa se existir usuário e sessão
+        
         <MeuPonto>
           <TituloPonto> SEU PONTO ESTÁ LIGADO </TituloPonto>
 
@@ -151,7 +149,7 @@ function Home() {
             </BotãoLigar>
           </DadosBotãoLigado>
         </MeuPonto>
-      {/* )} */}
+      )} 
 
       <ListaPonto>
         {/* <TituloListaPonto>
