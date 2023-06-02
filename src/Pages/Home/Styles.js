@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import imagem_home from "../../assets/imagem_home.png";
+import imagem_home from "../../assets/imagem_home.png";
 
 export const Container = styled.div`
   display: flex;
@@ -12,9 +12,18 @@ export const Container = styled.div`
 `;
 export const DivImg = styled.div`
   display: flex;
-  width: 80%;
-  height: 273px;
-  align-self: center;
+  flex-direction: row;
+  background-image: url(${imagem_home}); 
+  background-size: cover;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 294px;
+  align-items: center;
+  background-position: center;
+  justify-content: space-between;
+
+  @media (max-width: 550px) {
+  }
 `;
 
 // Início das divs da HOME -  PONTO

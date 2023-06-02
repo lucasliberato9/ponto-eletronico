@@ -5,19 +5,19 @@ import fundoHeader_mini from "../../assets/mini-header.png";
 import LatoBold from "../../fonts/LatoBlack.ttf"
 
 export const Container = styled.div`
-    display: flex;
-    flex-direction: row;
-    background-image: url(${fundoHeader_full}); 
-    background-size: cover;
-    width: 100%;
-    height: 72px;
-    align-items: center;
-    background-position: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  background-image: url(${fundoHeader_full}); 
+  background-size: cover;
+  width: 100%;
+  height: 72px;
+  align-items: center;
+  background-position: center;
+  justify-content: space-between;
 
-    @media (max-width: 550px) {
-      background-image: url(${fundoHeader_mid}); 
-    }
+  @media (max-width: 550px) {
+    background-image: url(${fundoHeader_mid}); 
+  }
 
     @media (max-width: 419px) {
       background-image: url(${fundoHeader_mini}); 
