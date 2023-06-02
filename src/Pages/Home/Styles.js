@@ -216,24 +216,3 @@ export const ListaPonto = styled.div`
   background-color: #1f1a1a;
   height: auto;
 `;
-export const TituloListaPonto = styled.div`
-  display: flex;
-  flex-direction: row;
-  color: #ffa000;
-  text-align: center;
-  align-content: center;
-  align-self: center;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
-`;
-export const UsuarioAtivo = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-  width: 80%;
-  align-items: center;
-  background-color: #1f1a1a;
-  height: auto;
-`;

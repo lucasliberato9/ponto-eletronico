@@ -10,48 +10,158 @@ import {
   NomesVar,
   BotãoLigar,
   ListaPonto,
+  TempoPonto,
+  BotãoLogin,
+  UsuarioTempo,
+  TempoVar,
+  InicioTempo,
+  DivSpace,
+  InicioTempoInicio,
+  DadosBotãoLigado,
+  // UsuarioAtivo,
+  // TituloListaPonto,
 } from "./Styles";
 import { BotaoGenerico } from "../../components";
+import {Link, useNavigate} from "react-router-dom";
+import useAuthStore from "../../stores/auth";
 
 function Home() {
+  // const usuario = useAuthStore((state) => state.usuario);
+  // const sessao = useAuthStore((state) => state.sessao);
+  const navigate = useNavigate();
+
+  const login = () => {
+    navigate("/login");
+  }
+
   return (
     <Container>
+
       <DivImg></DivImg>
-  
-      <MeuPonto>
-        <TituloPonto> LIGUE SEU PONTO </TituloPonto>
 
-        <DadosBotão>
-          <UsuarioPonto>
-            <TituloVar>
-              <JogadorJogo> Jogador: </JogadorJogo>
-              <NomesVar> Teste123 </NomesVar>
-            </TituloVar>
+      {/* {!usuario && ( */}
+        <MeuPonto>
+          <TituloPonto> ADMINISTRE SEU PONTO </TituloPonto>
 
-            <TituloVar>
-              <JogadorJogo> Jogo: </JogadorJogo>
-              <NomesVar> Teste123 </NomesVar>
-            </TituloVar>
-          </UsuarioPonto>
+          <DivSpace/>
 
-          <BotãoLigar>
+          <BotãoLogin>
+            {/* Esse botão deve redirecionar para a página Login */}
             <BotaoGenerico
               type="button"
-              name="Ligar Ponto"
+              
+              name="Login / Cadastre-se"
+              onClick={login}
               backgroundColor="#BC0E03"
               color="#d9d9d9"
               hoverBackgroundColor="#990D03"
-              width="160px"
-              widthResponsive715="200"
-              height="80px"
+              width="200px"
+              widthResponsive715="200px"
+              height="50px"
               heightResponsive715="50px"
               fontSize="20px"
             />
-          </BotãoLigar>
-        </DadosBotão>
-      </MeuPonto>
+          </BotãoLogin>
+        </MeuPonto>
+      {/* )} */}
 
-      <ListaPonto></ListaPonto>
+      {/* {!!usuario && ( */}
+
+        {/* // !sessao && */}
+
+        <MeuPonto>
+          <TituloPonto> LIGUE SEU PONTO </TituloPonto>
+
+          <DadosBotão>
+            <UsuarioPonto>
+              <TituloVar>
+                <JogadorJogo> Jogador: </JogadorJogo>
+                <NomesVar> Teste123 </NomesVar>
+              </TituloVar>
+
+              <TituloVar>
+                <JogadorJogo> Jogo: </JogadorJogo>
+                <NomesVar> Teste123 </NomesVar>
+              </TituloVar>
+            </UsuarioPonto>
+
+            <BotãoLigar>
+              {/* Esse botão deve criar uma sessão para o usuário */}
+              <BotaoGenerico
+                type="button"
+                name="Ligar Ponto"
+                backgroundColor="#BC0E03"
+                color="#d9d9d9"
+                hoverBackgroundColor="#990D03"
+                width="160px"
+                widthResponsive715="210px"
+                height="80px"
+                heightResponsive715="50px"
+                fontSize="20px"
+              />
+            </BotãoLigar>
+          </DadosBotão>
+        </MeuPonto>
+      {/* )} */}
+
+      {/* {!!usuario && ( */}
+        {/* // !!sessao &&  */}
+        <MeuPonto>
+          <TituloPonto> SEU PONTO ESTÁ LIGADO </TituloPonto>
+
+          <DadosBotãoLigado>
+            <UsuarioPonto>
+              <TituloVar>
+                <JogadorJogo> Jogador: </JogadorJogo>
+                <NomesVar> Teste123 </NomesVar>
+              </TituloVar>
+
+              <TituloVar>
+                <JogadorJogo> Jogo: </JogadorJogo>
+                <NomesVar> Teste123 </NomesVar>
+              </TituloVar>
+            </UsuarioPonto>
+
+            <UsuarioTempo>
+              <TempoPonto>
+                <InicioTempoInicio> Início: </InicioTempoInicio>
+                <TempoVar> 00:00 </TempoVar>
+              </TempoPonto>
+
+              <TempoPonto>
+                <InicioTempo> Tempo: </InicioTempo>
+                <TempoVar> 00:00 </TempoVar>
+              </TempoPonto>
+            </UsuarioTempo>
+
+            <BotãoLigar> 
+              {/* Esse botão deve deletar a sessão do usuário */}
+              <BotaoGenerico
+                type="button"
+                name="Desligar Ponto"
+                backgroundColor="#BC0E03"
+                color="#d9d9d9"
+                hoverBackgroundColor="#990D03"
+                width="160px"
+                widthResponsive715="210px"
+                height="80px"
+                heightResponsive715="50px"
+                fontSize="20px"
+              />
+            </BotãoLigar>
+          </DadosBotãoLigado>
+        </MeuPonto>
+      {/* )} */}
+
+      <ListaPonto>
+        {/* <TituloListaPonto>
+          <TituloPonto> Jogador </TituloPonto>
+          <TituloPonto> Jogo </TituloPonto>
+          <TituloPonto> Início </TituloPonto>
+          <TituloPonto> Tempo </TituloPonto>
+        </TituloListaPonto> */}
+        {/* <UsuarioAtivo></UsuarioAtivo> */}
+      </ListaPonto>
     </Container>
   );
 }
