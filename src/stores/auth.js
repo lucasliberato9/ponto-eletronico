@@ -7,7 +7,7 @@ const useAuthStore = create(
     (set) => ({
       token: null,
       usuario: null,
-      // sessao: null,
+      sessao: null,
 
       setToken: (token) => {
         const { usuario } = jwtDecode(token);
@@ -15,7 +15,7 @@ const useAuthStore = create(
       },
 
       setUsuario: (usuario) => set({usuario}),
-      // setSessao: (sessao) => set({sessao}),
+      setSessao: (sessao) => set({sessao}),
 
       clearAuth: () => set({token: null, usuario: null}),
       

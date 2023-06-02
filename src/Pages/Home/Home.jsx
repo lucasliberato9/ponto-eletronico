@@ -27,10 +27,10 @@ import useAuthStore from "../../stores/auth";
 function Home() {
   const clearAuth = useAuthStore((state) => state.clearAuth);
   const usuario = useAuthStore((state) => state.usuario);
-  // const sessao = useAuthStore((state) => state.sessao);
+  const sessao = useAuthStore((state) => state.sessao);
   const navigate = useNavigate();
 
-  //clearAuth();
+  // clearAuth();
 
   const login = () => {
     navigate("/login");
@@ -66,7 +66,7 @@ function Home() {
         </MeuPonto>
       )}
 
-      {!!usuario && (// !sessao && // Ativa se existir usuário mas não existir sessão
+      {!!usuario && !sessao &&( // Ativa se existir usuário mas não existir sessão
 
         <MeuPonto>
           <TituloPonto> LIGUE SEU PONTO </TituloPonto>
@@ -104,7 +104,7 @@ function Home() {
         </MeuPonto>
       )}
 
-      {!!usuario && (// !!sessao &&  // Ativa se existir usuário e sessão
+      {!!usuario && !!sessao &&(  // Ativa se existir usuário e sessão
         
         <MeuPonto>
           <TituloPonto> SEU PONTO ESTÁ LIGADO </TituloPonto>
