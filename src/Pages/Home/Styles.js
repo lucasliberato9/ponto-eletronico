@@ -211,8 +211,20 @@ export const ListaPonto = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  width: 80%;
+  width: 65%;
   align-items: center;
   background-color: #1f1a1a;
   height: auto;
 `;
+export const TituloListaPonto = styled.div`
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+  margin-bottom: 20px;
+  width: 100%;
+  align-items: center;
+  background-color: #1f1a1a;
+  height: auto;
+`;
+
+

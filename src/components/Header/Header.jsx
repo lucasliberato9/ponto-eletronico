@@ -37,7 +37,7 @@ function Header() {
             )}
             {!usuario && ( //Caso o usuário NÃO esteja logado
                 <DivButton>
-                    <BotaoGenerico onClick={login} type= "button" name= "Fazer Login Cadastre-se" width= "75%"/>
+                    <BotaoGenerico onClick={login} type= "button" name= "Fazer Login / Cadastre-se" width= "75%"/>
                 </DivButton>
             )}
 

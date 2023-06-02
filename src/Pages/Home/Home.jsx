@@ -18,8 +18,7 @@ import {
   DivSpace,
   InicioTempoInicio,
   DadosBotãoLigado,
-  // UsuarioAtivo,
-  // TituloListaPonto,
+  TituloListaPonto,
 } from "./Styles";
 import { BotaoGenerico } from "../../components";
 import {Link, useNavigate} from "react-router-dom";
@@ -156,13 +155,14 @@ function Home() {
       )} 
 
       <ListaPonto>
+
         <TituloListaPonto>
           <TituloPonto> Jogador </TituloPonto>
           <TituloPonto> Jogo </TituloPonto>
           <TituloPonto> Início </TituloPonto>
           <TituloPonto> Tempo </TituloPonto>
-        // </TituloListaPonto>
-        <UsuarioAtivo></UsuarioAtivo>
+        </TituloListaPonto>
+
       </ListaPonto>
     </Container>
   );
