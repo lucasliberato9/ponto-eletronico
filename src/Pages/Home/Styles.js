@@ -16,7 +16,7 @@ export const DivImg = styled.div`
   background-image: url(${imagem_home}); 
   background-size: cover;
   margin-bottom: 20px;
-  width: 65%;
+  width: 60%;
   height: 294px;
   align-items: center;
   background-position: center;
@@ -38,6 +38,20 @@ export const TituloPonto = styled.div`
   width: 100%;
   height: auto;
   margin-top: 20px;
+`;
+export const TituloPontoResponse = styled.div`
+  display: flex;
+  color: #ffa000;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  @media (max-width:"800px"){
+  width: 0%;
+  }
 `;
 export const MeuPonto = styled.div`
   display: flex;

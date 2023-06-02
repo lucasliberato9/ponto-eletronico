@@ -18,6 +18,7 @@ import {
   DivSpace,
   InicioTempoInicio,
   DadosBotãoLigado,
+  TituloPontoResponse,
   TituloListaPonto,
 } from "./Styles";
 import { BotaoGenerico } from "../../components";
@@ -30,17 +31,23 @@ import api from "../../services/api";
 export default function Home() {
   
   const clearAuth = useAuthStore((state) => state.clearAuth);
+  const clearSessao = useAuthStore((state) => state.clearSessao);
   const usuario = useAuthStore((state) => state.usuario);
   const sessao = useAuthStore((state) => state.sessao);
   const navigate = useNavigate();
   const [usuarios, setUsuarios] = useState([]);
   const [carregando, setCarregando] = useState(false);
-  const [sessaoCriada, setSessaoCriada] = useState(false);
-  const [horarioCriacaoSessao, setHorarioCriacaoSessao] = useState(null);
-  const [contadorHoras, setContadorHoras] = useState(0);
-  const [sessaoLigada, setSessaoLigada] = useState(false);
+  
+  // function tempoDePonto(tempo) {
+  //   var tempoAtual = new Date();
+  //   var tempoSubtraido = new Date(tempoAtual.getTime() - tempo);
+  //   return tempoSubtraido;
+  // }
 
-
+  // const [sessaoCriada, setSessaoCriada] = useState(false);
+  // const [horarioCriacaoSessao, setHorarioCriacaoSessao] = useState(null);
+  // const [contadorHoras, setContadorHoras] = useState(0);
+  // const [sessaoLigada, setSessaoLigada] = useState(false);
 
   console.log(usuarios);
 
@@ -57,35 +64,66 @@ export default function Home() {
       setCarregando(false);
     }
   };
-  const criarSessao = () => {
-    setContadorHoras(0); 
-    const horarioAtual = new Date();
-    setHorarioCriacaoSessao(horarioAtual);
-    setSessaoCriada(true);
-    setSessaoLigada(true);
-  };
-  
-  const desligarSessao = () => {
-    setSessaoCriada(false);
-    setHorarioCriacaoSessao(null);
-    setSessaoLigada(false);
-  };
-  
-  
 
-  useEffect(() => {
-    let interval;
+  const ligarPonto = async (e) => {
+    e.preventDefault();
+    try {
+      const id = usuario._id;
+      setCarregando(true);
+      const res = await api.post("/sessoes",  { id_usuario: id } );
+      console.log("Ponto ligado!", res.data);
+      setSessao(res.data);
 
-    if (sessaoCriada) {
-      interval = setInterval(() => {
-        setContadorHoras((prevContador) => prevContador + 1);
-      }, 1000);
+    } catch (erro) {
+
+      console.log("Erro ao ligar ponto", erro);
+
+    } finally {
+      setCarregando(false);
     }
+  };
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [sessaoCriada]);
+  const desligarPonto = async (e) => {
+    e.preventDefault();
+    try {
+      const id = usuario._id;
+      const res = await api.delete("/sessoes", { id });
+      console.log("Ponto desligado!", res.data);
+      clearSessao();
+    } catch (erro) {
+      console.log("Erro ao desligar ponto", erro);
+    }
+  };
+
+  // const criarSessao = () => {
+  //   setContadorHoras(0); 
+  //   const horarioAtual = new Date();
+  //   setHorarioCriacaoSessao(horarioAtual);
+  //   setSessaoCriada(true);
+  //   setSessaoLigada(true);
+  // };
+  
+  // const desligarSessao = () => {
+  //   setSessaoCriada(false);
+  //   setHorarioCriacaoSessao(null);
+  //   setSessaoLigada(false);
+  // };
+  
+  
+
+  // useEffect(() => {
+  //   let interval;
+
+  //   if (sessaoCriada) {
+  //     interval = setInterval(() => {
+  //       setContadorHoras((prevContador) => prevContador + 1);
+  //     }, 1000);
+  //   }
+
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, [sessaoCriada]);
 
 
   useEffect(() => {
@@ -133,7 +171,7 @@ export default function Home() {
         </MeuPonto>
       )}
 
-      {!!usuario && !sessaoLigada &&( 
+      {!!usuario && !sessao &&( 
 
         <MeuPonto>
           <TituloPonto> LIGUE SEU PONTO </TituloPonto>
@@ -142,7 +180,7 @@ export default function Home() {
             <UsuarioPonto>
               <TituloVar>
                 <JogadorJogo> Jogador: </JogadorJogo>
-                <NomesVar> {usuario.nome} </NomesVar>
+                <NomesVar> {usuario.nickname} </NomesVar>
               </TituloVar>
 
               <TituloVar>
@@ -164,14 +202,14 @@ export default function Home() {
                 height="80px"
                 heightResponsive715="50px"
                 fontSize="20px"
-                onClick={criarSessao}
+                onClick={ligarPonto}
               />
             </BotãoLigar>
           </DadosBotão>
         </MeuPonto>
       )}
 
-      {!!usuario && !!sessaoLigada &&(  // Ativa se existir usuário e sessão
+      {!!usuario && !!sessao &&(  // Ativa se existir usuário e sessão
         
         <MeuPonto>
           <TituloPonto> SEU PONTO ESTÁ LIGADO </TituloPonto>
@@ -180,7 +218,7 @@ export default function Home() {
             <UsuarioPonto>
               <TituloVar>
                 <JogadorJogo> Jogador: </JogadorJogo>
-                <NomesVar> {usuario.nome} </NomesVar>
+                <NomesVar> {usuario.nickname} </NomesVar>
               </TituloVar>
 
               <TituloVar>
@@ -193,14 +231,16 @@ export default function Home() {
               <TempoPonto>
                 <InicioTempoInicio> Início: </InicioTempoInicio>
                   <TempoVar>
-                    {horarioCriacaoSessao ? `${horarioCriacaoSessao.getHours().toString().padStart(2, '0')}:${horarioCriacaoSessao.getMinutes().toString().padStart(2, '0')}` : ''}
+                    {/* ${sessao.createdAt.getHours().toString().padStart(2, '0')}:${sessao.createAt.getMinutes().toString().padStart(2, '0')} */}
+                    {/* {horarioCriacaoSessao ? `${horarioCriacaoSessao.getHours().toString().padStart(2, '0')}:${horarioCriacaoSessao.getMinutes().toString().padStart(2, '0')}` : ''} */}
                   </TempoVar>
               </TempoPonto>
 
               <TempoPonto>
                 <InicioTempo>Tempo:</InicioTempo>
                   <TempoVar>
-                    {`${Math.floor(contadorHoras / 3600).toString().padStart(2, '0')}:${Math.floor((contadorHoras % 3600) / 60).toString().padStart(2, '0')}`}
+                    {/* ${tempoDePonto(sessao.createdAt).getHours().toString().padStart(2, '0')}:${tempoDePonto(sessao.createAt).getMinutes().toString().padStart(2, '0')}; */}
+                    {/* {`${Math.floor(contadorHoras / 3600).toString().padStart(2, '0')}:${Math.floor((contadorHoras % 3600) / 60).toString().padStart(2, '0')}`} */}
                   </TempoVar>
               </TempoPonto>
             </UsuarioTempo>
@@ -218,7 +258,7 @@ export default function Home() {
                 height="80px"
                 heightResponsive715="50px"
                 fontSize="20px"
-                onClick={ desligarSessao }
+                onClick={ desligarPonto }
               />
             </BotãoLigar>
           </DadosBotãoLigado>
@@ -230,44 +270,13 @@ export default function Home() {
 
           <TituloListaPonto>
             <TituloPonto> Jogador </TituloPonto>
-            <TituloPonto> Jogo </TituloPonto>
-            <TituloPonto> Início </TituloPonto>
+            <TituloPontoReponse> Jogo </TituloPontoReponse>
+            <TituloPontoReponse> Início </TituloPontoReponse>
             <TituloPonto> Tempo </TituloPonto>
           </TituloListaPonto>
 
-          {/* <TituloListaPonto>
-            <NomesVar> 
-              {usuarios.map((usuario) => (
-                <Usuario 
-                key={usuario.id}
-                usuario={usuario}/>
-              ))} 
-            </NomesVar>
-
-            <NomesVar> 
-              {usuarios.map((usuario) => (
-                <Usuario
-                key={usuario.id}
-                sessaoCriada={sessaoCriada}/>
-              ))} 
-            </NomesVar>
-
-            <NomesVar> 
-              {usuarios.map((usuario) => (
-                <Usuario 
-                key={usuario.id} 
-                horarioCriacaoSessao={horarioCriacaoSessao}/>
-              ))} 
-            </NomesVar>
-
-            <NomesVar> 
-              {usuarios.map((usuario) => (
-                <Usuario 
-                key={usuario.id} 
-                contadorHoras={contadorHoras}/>
-              ))} 
-            </NomesVar>
-          </TituloListaPonto> */}
+          <TituloListaPonto>
+          </TituloListaPonto>
 
         </ListaPonto>
       )}

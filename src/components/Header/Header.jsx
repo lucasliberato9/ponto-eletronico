@@ -1,5 +1,6 @@
 import { Container, DivButton, Titulo } from "./Styles";
 import { BotaoGenerico } from "../../components";
+import { BotaoHome } from "../../components";
 import useAuthStore from "../../stores/auth";
 import {Link, useNavigate} from "react-router-dom";
 
@@ -7,6 +8,10 @@ function Header() {
     const usuario = useAuthStore((state) => state.usuario);
     const clearAuth = useAuthStore((state) => state.clearAuth);
     const navigate = useNavigate();
+
+    const home = () => {
+        navigate("/");
+    }
 
     const logout = () => {
         clearAuth();
@@ -25,8 +30,7 @@ function Header() {
         <Container>
 
             <Titulo>
-                UFMG FÊNIX
-                Esports
+                <BotaoHome onClick={home} name="UFMG FÊNIX Esports"/>     
             </Titulo>
 
             {!!usuario && ( //Caso o usuário esteja logado

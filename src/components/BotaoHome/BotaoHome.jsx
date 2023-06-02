@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Button } from "./Styles";
 
-function BotaoGenerico({
+function BotaoHome({
   onClick,
   name,
   width,
@@ -33,15 +33,15 @@ function BotaoGenerico({
 
 Button.defaultProps = {
   onClick: () => {},
-  name: "Submit",
-  width: "250px",
-  height: "40px",
+  name: "UFMG FÊNIX Esports",
+  width: "400px",
+  height: "60px",
   widthResponsive715: "250px",
   heightResponsive715: "40px",
-  fontSize: "14px",
-  backgroundColor: "#FFA000",
-  color: "black",
-  hoverBackgroundColor: "#E08E00",
+  fontSize: "20px",
+  backgroundColor: "#D60000",
+  color: "#d9d9d9",
+  hoverBackgroundColor: "#D60000",
 };
 
 Button.propTypes = {
@@ -57,4 +57,4 @@ Button.propTypes = {
   hoverBackgroundColor: PropTypes.string,
 };
 
-export default BotaoGenerico;
+export default BotaoHome;
