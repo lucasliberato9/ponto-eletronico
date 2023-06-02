@@ -12,8 +12,9 @@ const [senha, setSenha] = useState("");
 const [carregando, setCarregando] = useState(false);
 const navigate = useNavigate();
 const setToken = useAuthStore((state) => state.setToken);
-// const token = useAuthStore((state) => state.token);
-// const usuario = useAuthStore((state) => state.usuario);
+const token = useAuthStore((state) => state.token);
+const usuario = useAuthStore((state) => state.usuario);
+
 const cadastro = () => {
   navigate("/cadastro");
 }

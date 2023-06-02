@@ -11,9 +11,11 @@ function BotaoGenerico({
   backgroundColor,
   color,
   hoverBackgroundColor,
+  onClick,
 }) {
   return (
     <Button
+      onClick="submit"
       type="submit"
       width={width}
       height={height}

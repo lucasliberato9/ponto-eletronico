@@ -26,9 +26,12 @@ import {Link, useNavigate} from "react-router-dom";
 import useAuthStore from "../../stores/auth";
 
 function Home() {
+  const clearAuth = useAuthStore((state) => state.clearAuth);
   const usuario = useAuthStore((state) => state.usuario);
   // const sessao = useAuthStore((state) => state.sessao);
   const navigate = useNavigate();
+
+  //clearAuth();
 
   const login = () => {
     navigate("/login");
@@ -49,9 +52,7 @@ function Home() {
             {/* Esse botão deve redirecionar para a página Login */}
             <BotaoGenerico
               type="button"
-              
               name="Login / Cadastre-se"
-              onClick={login}
               backgroundColor="#BC0E03"
               color="#d9d9d9"
               hoverBackgroundColor="#990D03"
@@ -60,6 +61,7 @@ function Home() {
               height="50px"
               heightResponsive715="50px"
               fontSize="20px"
+              onClick={login}
             />
           </BotãoLogin>
         </MeuPonto>
@@ -96,6 +98,7 @@ function Home() {
                 height="80px"
                 heightResponsive715="50px"
                 fontSize="20px"
+                //onClick={}
               />
             </BotãoLigar>
           </DadosBotão>
@@ -145,6 +148,7 @@ function Home() {
                 height="80px"
                 heightResponsive715="50px"
                 fontSize="20px"
+                //onClick={}
               />
             </BotãoLigar>
           </DadosBotãoLigado>
@@ -152,13 +156,13 @@ function Home() {
       )} 
 
       <ListaPonto>
-        {/* <TituloListaPonto>
+        <TituloListaPonto>
           <TituloPonto> Jogador </TituloPonto>
           <TituloPonto> Jogo </TituloPonto>
           <TituloPonto> Início </TituloPonto>
           <TituloPonto> Tempo </TituloPonto>
-        </TituloListaPonto> */}
-        {/* <UsuarioAtivo></UsuarioAtivo> */}
+        // </TituloListaPonto>
+        <UsuarioAtivo></UsuarioAtivo>
       </ListaPonto>
     </Container>
   );
