@@ -58,11 +58,13 @@ export default function Home() {
     }
   };
   const criarSessao = () => {
+    setContadorHoras(0); 
     const horarioAtual = new Date();
     setHorarioCriacaoSessao(horarioAtual);
     setSessaoCriada(true);
     setSessaoLigada(true);
   };
+  
   const desligarSessao = () => {
     setSessaoCriada(false);
     setHorarioCriacaoSessao(null);
@@ -196,8 +198,10 @@ export default function Home() {
               </TempoPonto>
 
               <TempoPonto>
-                <InicioTempo> Tempo: </InicioTempo>
-                <TempoVar> {contadorHoras} </TempoVar>
+                <InicioTempo>Tempo:</InicioTempo>
+                  <TempoVar>
+                    {`${Math.floor(contadorHoras / 3600).toString().padStart(2, '0')}:${Math.floor((contadorHoras % 3600) / 60).toString().padStart(2, '0')}`}
+                  </TempoVar>
               </TempoPonto>
             </UsuarioTempo>
 
