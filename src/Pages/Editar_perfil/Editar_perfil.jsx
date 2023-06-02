@@ -13,6 +13,7 @@ import { BotaoGenerico } from "../../components";
 import { useState} from "react";
 import api from "../../services/api.js";
 import useAuthStore from "../../stores/auth.js";
+import {useNavigate} from "react-router-dom";
 
 
 function Editar_perfil() {
@@ -26,6 +27,9 @@ function Editar_perfil() {
   const [carregando, setCarregando] = useState(false);
   const setUsuario = useAuthStore((state) => state.setUsuario);
   
+  const editarperfil = () => {
+    navigate("/editar-perfil");
+}
   const handleSubmit = async (e) => {
     e.preventDefault();
     //template string
@@ -95,17 +99,25 @@ function Editar_perfil() {
         
         </DivInputs>
         <DivButton>
-        <BotaoGenerico name="Confirmar" />
-        
-      </DivButton>
+
+          <div>
+           <BotaoGenerico name="Confirmar" />
+          </div>
+
+          <div>
+            <BotaoGenerico
+              name="Cancelar Alterações"
+              backgroundColor="#BC0E03"
+              color="#d9d9d9"
+              hoverBackgroundColor="#990D03"
+              onClick={editarperfil}
+            />
+          </div>
+      
+        </DivButton>
       </Form>
 
-      <BotaoGenerico
-          name="Cancelar Alterações"
-          backgroundColor="#BC0E03"
-          color="#d9d9d9"
-          hoverBackgroundColor="#990D03"
-        />
+  
     </Container>
   );
 }

@@ -64,6 +64,7 @@ export const DivButton = styled.div`
   width: auto;
   flex-direction: row;
   gap: 60px;
+  align-self: center;
   margin-top: 48px;
   margin-bottom: 50px;
   @media (max-width: 750px) {
